@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_security"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp"
+        android:text="@string/security"
+        android:textColor="@color/Black"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/llSecurity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_security"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/shape_white"
+        android:elevation="0.3dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlPattern"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <ImageView
+                android:id="@+id/iv_pattern"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:src="@drawable/d_pattern" />
+
+            <TextView
+                android:id="@+id/tv_pattern"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/medium"
+                android:layout_toStartOf="@+id/pattern_switch"
+                android:layout_toEndOf="@id/iv_pattern"
+                android:paddingStart="10dp"
+                android:paddingEnd="5dp"
+                android:text="@string/pattern_lock"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/pattern_switch"
+                android:layout_width="50dp"
+                android:layout_height="36dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="18dp"
+                android:thumb="@drawable/switch_thumb"
+                app:track="@drawable/switch_xml" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlChangePattern"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <ImageView
+                android:id="@+id/iv_ChangePattern"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:src="@drawable/d_p_change" />
+
+            <TextView
+                android:id="@+id/tv_Changepattern"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/img3"
+                android:layout_toEndOf="@id/iv_ChangePattern"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/medium"
+                android:paddingEnd="5dp"
+                android:text="@string/change_pattern"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/setting_next_bg"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="3dp"
+                android:src="@drawable/ic_baseline_navigate_next_24_black" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlChangeChatLocker"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <ImageView
+                android:id="@+id/iv_ChangeChatLocker"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:src="@drawable/d_lock" />
+
+            <TextView
+                android:id="@+id/tv_change_chat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/img4"
+                android:layout_toEndOf="@id/iv_ChangeChatLocker"
+                android:paddingStart="10dp"
+                android:paddingEnd="5dp"
+                android:fontFamily="@font/medium"
+                android:text="@string/change_chat_lock"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/setting_next_bg"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="3dp"
+                android:src="@drawable/ic_baseline_navigate_next_24_black" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

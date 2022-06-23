@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlChatWindow"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorWhite">
+
+    <include
+        android:id="@+id/ic_include"
+        layout="@layout/content_toolbar_info" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/ll_banner"
+        android:layout_below="@+id/ic_include"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/chat_window_img"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/bottomlayout"
+            android:contentDescription="@string/app_image_desc"
+            android:padding="20dp"
+            android:src="@drawable/chat_layout_1" />
+
+        <RelativeLayout
+            android:id="@+id/bottomlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginRight="5.0dip">
+
+            <ImageView
+                android:id="@+id/previous_img"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/next_with_bg"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="4dp"
+                android:rotation="180"
+                android:src="@drawable/ic_baseline_navigate_next_24_white" />
+
+            <TextView
+                android:id="@+id/applytheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/next_img"
+                android:layout_toEndOf="@+id/previous_img"
+                android:background="@drawable/button_light"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/apply"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/next_img"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/next_with_bg"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="4dp"
+                android:src="@drawable/ic_baseline_navigate_next_24_white" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" />
+</RelativeLayout>

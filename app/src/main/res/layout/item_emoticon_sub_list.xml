@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="92dp"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:id="@+id/rlBackground"
+        android:layout_width="match_parent"
+        android:layout_height="70.0dp"
+        android:background="#97F6F6F6">
+
+        <TextView
+            android:id="@+id/emoticon_subcat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20.0dp"
+            android:layout_marginEnd="10.0dp"
+            android:fontFamily="@font/medium"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/colorBlack"
+            android:textSize="16.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="150.0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="30.0dp"
+        android:layout_marginBottom="10.0dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/emoticon_copy"
+            android:layout_width="30.0dp"
+            android:layout_height="30.0dp"
+            android:layout_toEndOf="@+id/emoticon_share_all"
+            android:contentDescription="@string/app_image_desc"
+            android:src="@drawable/ic_copy_magic" />
+
+        <ImageView
+            android:id="@+id/emoticon_share_all"
+            android:layout_width="30.0dp"
+            android:layout_height="30.0dp"
+            android:layout_marginStart="15.0sp"
+            android:layout_marginEnd="15.0sp"
+            android:layout_toEndOf="@+id/emoticon_share"
+            android:contentDescription="@string/app_image_desc"
+            android:src="@drawable/ic_share_magic" />
+
+        <ImageView
+            android:id="@+id/emoticon_share"
+            android:layout_width="30.0dp"
+            android:layout_height="30.0dp"
+            android:contentDescription="@string/app_image_desc"
+            android:src="@drawable/ic_wp_magic" />
+    </RelativeLayout>
+</RelativeLayout>

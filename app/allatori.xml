@@ -1,0 +1,176 @@
+<config>
+    <input>
+        <dir in="${classesRoot}" out="${classesRoot}-obfuscated" />
+    </input>
+
+
+    <classpath>
+        <jar name="${androidJar}" />
+        <jar name="${classpathJars}" />
+    </classpath>
+
+    <keep-names>
+        <class template="public class * instanceof androidx.appcompat.app.AppCompatActivity">
+            <method template="public void *(android.view.View)" />
+        </class>
+
+        <class access="protected+">
+            <field access="protected+" />
+            <!--            <method access="protected+" />-->
+        </class>
+
+        <class template="class * extends java.lang.Enum">
+            <method template="values()" />
+            <method template="valueOf(java.lang.String)" />
+        </class>
+        <class template="class * implements android.os.Parcelable">
+            <field template="public static final android.os.Parcelable*Creator *" />
+        </class>
+        <class template="class *.R*">
+            <field template="public static *" />
+        </class>
+        <!--        <class template="class com.logo.design.image.template.text.maker.New_Model_LGM.*">-->
+        <!--            <field template="*" />-->
+        <!--            <method template="*(**)" />-->
+        <!--        </class>-->
+
+        <class template="public class * instanceof android.view.View">
+            <method template="void set*(**)" />
+            <method template="get*()" />
+        </class>
+
+        <class template="class com.whatscan.toolkit.forwa.Adapter.MainStickerCategeryAdapter">
+            <field template="*" />
+            <method template="*(**)" />
+        </class>
+        <class template="class com.whatscan.toolkit.forwa.Payment">
+            <field template="*" />
+            <method template="*(**)" />
+        </class>
+        <class template="class com.whatscan.toolkit.forwa.Adapter.MainStickerSubCategeryAdapter">
+            <field template="*" />
+            <method template="*(**)" />
+        </class>
+        <class template="class com.whatscan.toolkit.forwa.Adapter.StickerViewAdapter">
+            <field template="*" />
+            <method template="*(**)" />
+        </class>
+        <class template="class com.whatscan.toolkit.forwa.WSticker.ActivityStickerDetails">
+            <field template="*" />
+            <method template="*(**)" />
+        </class>
+        <class template="class com.whatscan.toolkit.forwa.WSticker.ActivityStickerMakerList">
+            <field template="*" />
+            <method template="*(**)" />
+        </class>
+
+
+        <class template="class com.whatscan.toolkit.forwa.GetSet.*">
+            <field template="*" />
+            <method template="*(**)" />
+        </class>
+
+
+        <class template="public class *" />
+
+    </keep-names>
+
+
+    <!--{ DO NOT CHANGE ANY PROPERTY AND VALUES}-->
+
+    <!--    <property name="skip-renaming" value="enable" />-->
+    <!--LOGFILE*************************************************************************************************************-->
+    <property name="log-file" value="${logFile}" />
+    <!--********************************************************************************************************************-->
+
+    <!--LOGFILE*************************************************************************************************************-->
+    <property name="extensive-flow-obfuscation" value="maximum" />
+
+    <!--    ********************************************UPDATE RESOURCE*****************************************************-->
+    <!--    <property name="update-resource-contents" value="enable" />-->
+    <!--********************************************************************************************************************-->
+
+
+    <!-- STRING ENCRYPTION**************************************************************************************************-->
+    <property name="remove-toString" value="enable" />
+    <property name="string-encryption-type" value="fast" />
+    <!--********************************************************************************************************************-->
+
+    <!--RANDOM SEED********************************************************************************************************-->
+    <property name="random-seed" value="hjkdhfidiyf" />
+    <!--********************************************************************************************************************-->
+
+    <!--REMOVE LOG**********************************************************************************************************-->
+    <!--    <property name="remove-calls" value="android.util.Log.*" />-->
+    <!--********************************************************************************************************************-->
+
+    <!--  ITS FILD REQUIRD COMPALSARY***************************************************************************************-->
+    <property name="output-jar-compression-level" value="9" />
+    <!-- *******************************************************************************************************************-->
+
+    <!-- FILD ENCRYPTED*****************************************************************************************************-->
+    <property name="fields-naming" value="iii" />
+    <!--    ****************************************************************************************************************-->
+
+
+    <!--VARIABLE ENCRYPTED**************************************************************************************************-->
+    <property name="local-variables-naming" value="remove" />
+    <!--********************************************************************************************************************-->
+
+
+    <!--CONTROL FLOW ENCRYPTED**********************************************************************************************-->
+    <property name="control-flow-obfuscation" value="enable" />
+    <!--********************************************************************************************************************-->
+
+    <!--CLASS NAME**********************************************************************************************************-->
+    <property name="classes-naming" value="iii" />
+    <!--********************************************************************************************************************-->
+
+    <!--CLASS NAME**********************************************************************************************************-->
+    <property name="fields-naming-prefix"
+        value="IIiiIiIIIIiiiiIIIIiiiiIIiiiIIiiiIIiiiIiiiiiiiiiIIIiIiIIIiIIIIIIIiIIIIiIIiiiiiiIIiiIi" />
+    <!--********************************************************************************************************************-->
+
+    <!--DEFUALT PACKAGE ****************************************************************************************************-->
+    <property name="default-package" value="IIiiiiIIIIiii.IIIIiiiiiIII.iiiiIiiIIIIiiIiii" />
+    <property name="packages-naming" value="abc" />
+    <property name="force-default-package" value="enable" />
+    <property name="classes-naming-prefix"
+        value="IIiiIiIIIIiiiiIIIIiiiiIIiiiIIiiiIIiiiIiiiiiiiiiIIIiIiIIIiIIIIIIIiIIIIiIIiiiiiiIIiiIi" />
+    <!-- *******************************************************************************************************************-->
+
+    <!--UPDATE RESOURCE NAME************************************************************************************************-->
+    <property name="update-resource-names" value="enable" />
+    <!--********************************************************************************************************************-->
+
+    <!--UPDATE RESOURCE CONTENTS********************************************************************************************-->
+    <property name="update-resource-contents" value="enable:UTF-8" />
+    <!--********************************************************************************************************************-->
+
+    <!--METHOD NAME STYLE **************************************************************************************************-->
+    <property name="methods-naming" value="iii" />
+    <!--    ****************************************************************************************************************-->
+
+    <!--LINE NUMBER OBFUSCATE***********************************************************************************************-->
+    <property name="line-numbers" value="obfuscate" />
+    <!--********************************************************************************************************************-->
+
+
+    <!--MEMBER RECORD RANDOME***********************************************************************************************-->
+    <property name="member-reorder" value="enable" />
+    <!--********************************************************************************************************************-->
+
+    <!--UTILS***************************************************************************************************************-->
+    <property name="finalize" value="enable" />
+    <!--********************************************************************************************************************-->
+
+    <!--SYNTHEIZE METHOD****************************************************************************************************-->
+    <property name="synthetize-methods" value="package" />
+    <!--********************************************************************************************************************-->
+
+    <property name="inner-classes" value="remove" />
+</config>
+
+
+
+

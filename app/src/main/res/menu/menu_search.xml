@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_add_contact"
+        android:icon="@drawable/ic_baseline_person_add_24"
+        android:title="Add Contact"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_refresh_contact"
+        android:icon="@drawable/ic_refresh"
+        android:title="Sync Contacts"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_view"
+        android:title=""
+        app:showAsAction="never|always|collapseActionView" />
+
+    <item
+        android:id="@+id/action_select_all"
+        android:icon="@drawable/ic_done_all"
+        android:title="Select All"
+        app:showAsAction="never|always|collapseActionView" />
+</menu>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rv_master_required"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15sp"
+        android:background="@drawable/shape_white">
+
+        <RelativeLayout
+            android:id="@+id/rl_offer_1"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/master_bg">
+
+            <TextView
+                android:id="@+id/offer_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/offer_crown"
+                android:fontFamily="@font/bold"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="1dp"
+                android:text="Master plan"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/offer_percent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/offer_title"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/offer_crown"
+                android:fontFamily="@font/bold"
+                android:paddingStart="10sp"
+                android:paddingTop="1dp"
+                android:paddingEnd="10sp"
+                android:text="Upgrade to VIP"
+                android:textColor="@color/white"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/offer_sub_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/offer_percent"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/offer_crown"
+                android:fontFamily="@font/medium"
+                android:paddingStart="10sp"
+                android:paddingTop="1dp"
+                android:paddingEnd="10sp"
+                android:text="Upgrade to master just use the best tools for application."
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:id="@+id/offer_crown"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginStart="5dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/mas_1" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_master_offer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_offer_1"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/plan_master_border"
+            android:padding="5dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_price1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/no_price_vip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/strike_text"
+                    android:fontFamily="@font/medium"
+                    android:text="$29.99 / Yearly"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="#0160BC"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/price_vip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@+id/no_price_vip"
+                    android:fontFamily="@font/medium"
+                    android:text="$24.99 / Yearly"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16.3sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/bulk_text_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_price1"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/regular"
+                android:text="After 1 year regular price applies, Offer valid only for the first purchase"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#73000000"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_master_required"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15sp"
+        android:gravity="center"
+        android:background="@drawable/offer_top">
+
+        <ImageView
+            android:id="@+id/offer_top_icon"
+            android:layout_width="24sp"
+            android:layout_height="24sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:padding="1dp"
+            android:src="@drawable/d_master" />
+
+        <TextView
+            android:id="@+id/offer_top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/medium"
+            android:layout_marginEnd="15sp"
+            android:text="MASTER REQUIRED"
+            android:textSize="12sp"
+            android:textColor="#0160BC" />
+
+    </LinearLayout>
+</RelativeLayout>

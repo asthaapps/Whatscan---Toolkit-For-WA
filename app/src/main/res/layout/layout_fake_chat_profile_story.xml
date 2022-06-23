@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llFCPS"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="2dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginEnd="2dp"
+    android:elevation="0.4dp"
+    android:orientation="horizontal"
+    android:padding="3dp"
+    android:baselineAligned="false">
+
+    <RelativeLayout
+        android:id="@+id/card_fakeChat"
+        android:layout_width="0dp"
+        android:layout_height="115dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/shape_white"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/la_fakeChat"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="20dp"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="3dp"
+                android:src="@drawable/w_fake_chat" />
+
+            <TextView
+                android:id="@+id/tv_fake_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/la_fakeChat"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="2dp"
+                android:text="@string/fake_chat"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                android:textColor="@color/colorBlack" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/card_fakeProfile"
+        android:layout_width="0dp"
+        android:layout_height="115dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/shape_white"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/la_fakeProfile"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:padding="3dp"
+                android:layout_marginBottom="20dp"
+                android:contentDescription="@string/app_image_desc"
+                android:src="@drawable/w_fake_profile" />
+
+
+            <TextView
+                android:id="@+id/tv_fake_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/la_fakeProfile"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="2dp"
+                android:text="@string/fake_profile"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                android:textColor="@color/colorBlack" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/card_fakeStory"
+        android:layout_width="0dp"
+        android:layout_height="115dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/shape_white"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/la_fakeStory"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="20dp"
+                android:padding="3dp"
+                android:contentDescription="@string/app_image_desc"
+                android:src="@drawable/w_fake_status" />
+
+
+            <TextView
+                android:id="@+id/tv_fake_story"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/la_fakeStory"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="2dp"
+                android:text="@string/fake_story"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                android:textColor="@color/colorBlack" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

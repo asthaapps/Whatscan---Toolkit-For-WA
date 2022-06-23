@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlSetting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card_color">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+
+            <include layout="@layout/setting_top" />
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/banner_slider"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:visibility="gone"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="true"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                app:sliderIndicatorRadius="1.5dp"
+                app:sliderIndicatorSelectedColor="@color/colorTools"
+                app:sliderIndicatorUnselectedColor="#F5F6F8"
+                app:sliderScrollTimeInSec="1"
+                app:sliderStartAutoCycle="true" />
+
+            <include layout="@layout/setting_general" />
+
+            <include layout="@layout/setting_security" />
+
+            <include layout="@layout/setting_about_us" />
+
+            <include layout="@layout/setting_legel" />
+
+            <TextView
+                android:id="@+id/tv_follow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bold"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:text="@string/follow_us"
+                android:textColor="@color/Black"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:id="@+id/llFollow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/shape_white"
+                android:elevation="0.3dp"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/la_fb"
+                    android:layout_width="41dp"
+                    android:layout_height="41dp"
+                    android:layout_weight="1"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/facebook" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/la_ins"
+                    android:layout_width="41dp"
+                    android:layout_height="41dp"
+                    android:layout_weight="1"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/instagram" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/la_twitter"
+                    android:layout_width="41dp"
+                    android:layout_height="41dp"
+                    android:layout_weight="1"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/twitter" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/la_youtube"
+                    android:layout_width="41dp"
+                    android:layout_height="41dp"
+                    android:layout_weight="1"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/youtube" />
+            </LinearLayout>
+
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/review_slider"
+                android:layout_width="match_parent"
+                android:layout_height="315dp"
+                android:layout_marginTop="25dp"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="true"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                app:sliderIndicatorRadius="2dp"
+                app:sliderIndicatorSelectedColor="#4D6DA188"
+                app:sliderIndicatorUnselectedColor="#FFF"
+                app:sliderScrollTimeInSec="2"
+                app:sliderStartAutoCycle="true" />
+
+            <RelativeLayout
+                android:id="@+id/rl_chat_us"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginEnd="15sp"
+                android:background="@drawable/shape_white"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/icon_chat_us"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:src="@drawable/d_wp" />
+
+                <TextView
+                    android:id="@+id/chat_us_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/icon_chat_us_next"
+                    android:layout_toEndOf="@+id/icon_chat_us"
+                    android:fontFamily="@font/bold"
+                    android:padding="10dp"
+                    android:text="Chat with us on WhatsApp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorBlack" />
+
+                <ImageView
+                    android:id="@+id/icon_chat_us_next"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/setting_next_bg"
+                    android:contentDescription="@string/app_image_desc"
+                    android:padding="3dp"
+                    android:src="@drawable/ic_baseline_navigate_next_24_black" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_figure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bold"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:text="Our Success! Some Figures"
+                android:textColor="@color/Black"
+                android:textSize="15sp" />
+
+            <include layout="@layout/setting_figure" />
+
+            <TextView
+                android:id="@+id/txtWebsite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:text="www.whatscan.co"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txtAppVersn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:padding="15sp"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

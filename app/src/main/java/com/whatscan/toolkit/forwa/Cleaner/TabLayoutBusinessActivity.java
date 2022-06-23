@@ -1,0 +1,155 @@
+package com.whatscan.toolkit.forwa.Cleaner;
+
+import android.os.Build;
+import android.os.Bundle;
+import android.text.Html;
+import android.view.View;
+import android.view.Window;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.viewpager.widget.ViewPager;
+
+import com.airbnb.lottie.LottieAnimationView;
+import com.whatscan.toolkit.forwa.Adapter.TabsAdapter;
+import com.whatscan.toolkit.forwa.Ads.Advertisement;
+import com.whatscan.toolkit.forwa.R;
+import com.whatscan.toolkit.forwa.Util.Constant;
+import com.whatscan.toolkit.forwa.Util.Preference;
+import com.google.android.material.tabs.TabLayout;
+
+public class TabLayoutBusinessActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Constant.adjustFontScale(getResources().getConfiguration(), TabLayoutBusinessActivity.this);
+        setContentView(R.layout.activity_tab_layout_cleaner);
+
+        LinearLayout ll_banner = findViewById(R.id.ll_banner);
+        Advertisement.showBannerAds(TabLayoutBusinessActivity.this, ll_banner);
+
+        TextView tv_toolbar = findViewById(R.id.tv_toolbar);
+        ImageView la_back = findViewById(R.id.la_back);
+        TabLayout tabLayout = findViewById(R.id.tab_cleaner);
+        ViewPager viewPager = findViewById(R.id.clean_viewPager);
+        RelativeLayout rl_cleaner = findViewById(R.id.rl_cleaner);
+        View ic_include = findViewById(R.id.ic_include);
+
+        tv_toolbar.setText(Html.fromHtml("<small>" + getString(R.string.whatsCleaner) + "</small>"));
+
+        if (Preference.getBooleanTheme(false)) {
+            setStatusBarTheme();
+            rl_cleaner.setBackgroundColor(ContextCompat.getColor(this, R.color.darkBlack));
+            ic_include.setBackgroundColor(ContextCompat.getColor(this, R.color.darkBlack));
+            tabLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.darkBlack));
+            tabLayout.setSelectedTabIndicatorColor(ContextCompat.getColor(this, R.color.colorWhite));
+            tabLayout.setTabTextColors(ContextCompat.getColor(this, R.color.colorAccent), ContextCompat.getColor(this, R.color.colorWhite));
+        } else {
+            setStatusBar();
+            rl_cleaner.setBackgroundColor(ContextCompat.getColor(this, R.color.colorWhite));
+            ic_include.setBackgroundColor(ContextCompat.getColor(this, R.color.colorWhite));
+            tabLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.colorWhite));
+            tabLayout.setSelectedTabIndicatorColor(ContextCompat.getColor(this, R.color.colorAccent));
+            tabLayout.setTabTextColors(ContextCompat.getColor(this, R.color.colorBlack), ContextCompat.getColor(this, R.color.colorAccent));
+        }
+
+
+        String category = getIntent().getStringExtra("category");
+        String pathname = getIntent().getStringExtra("pathname");
+        TabsAdapter tabsAdapter;
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            switch (category) {
+                case Constant.IMAGE:
+                    tabsAdapter = new TabsAdapter(getSupportFragmentManager(), Constant.IMAGE, Constant.imagesReceivedPathB, Constant.imagesSentPathB);
+                    break;
+                case Constant.DOCUMENT:
+                    tabsAdapter = new TabsAdapter(getSupportFragmentManager(), Constant.DOCUMENT, Constant.documentsReceivedPathB, Constant.documentsSentPathB);
+                    break;
+                case Constant.VIDEO:
+                    tabsAdapter = new TabsAdapter(getSupportFragmentManager(), Constant.VIDEO, Constant.videosReceivedPathB, Constant.videosSentPathB);
+                    break;
+                case Constant.AUDIO:
+                    tabsAdapter = new TabsAdapter(getSupportFragmentManager(), Constant.AUDIO, Constant.audiosReceivedPathB, Constant.audiosSentPathB);
+                    break;
+                case Constant.GIF:
+                    tabsAdapter = new TabsAdapter(getSupportFragmentManager(), Constant.GIF, Constant.gifReceivedPathB, Constant.gifSentPathB);
+                    break;
+                case Constant.WALLPAPER:
+                    tabsAdapter = new TabsAdapter(getSupportFragmentManager(), Constant.WALLPAPER, Constant.wallReceivedPathB, Constant.wallSentPathB);
+                    break;
+                case Constant.VOICE:
+                    tabsAdapter = new TabsAdapter(getSupportFragmentManager(), Constant.VOICE, Constant.voiceReceivedPathB, Constant.voiceSentPathB);
+                    break;
+                case Constant.STATUS:
+                    tabsAdapter = new TabsAdapter(getSupportFragmentManager(), Constant.STATUS, Constant.statuscacheB, Constant.statusdownloadB);
+                    break;
+                default:
+                    tabsAdapter = new TabsAdapter(getSupportFragmentManager(), Constant.NONDEFAULT, pathname, pathname);
+                    break;
+            }
+        } else {
+            switch (category) {
+                case Constant.IMAGE:
+                    tabsAdapter = new TabsAdapter(getSupportFragmentManager(), Constant.IMAGE, Constant.imagesReceivedPathNB, Constant.imagesSentPathNB);
+                    break;
+                case Constant.DOCUMENT:
+                    tabsAdapter = new TabsAdapter(getSupportFragmentManager(), Constant.DOCUMENT, Constant.documentsReceivedPathNB, Constant.documentsSentPathNB);
+                    break;
+                case Constant.VIDEO:
+                    tabsAdapter = new TabsAdapter(getSupportFragmentManager(), Constant.VIDEO, Constant.videosReceivedPathNB, Constant.videosSentPathNB);
+                    break;
+                case Constant.AUDIO:
+                    tabsAdapter = new TabsAdapter(getSupportFragmentManager(), Constant.AUDIO, Constant.audiosReceivedPathNB, Constant.audiosSentPathNB);
+                    break;
+                case Constant.GIF:
+                    tabsAdapter = new TabsAdapter(getSupportFragmentManager(), Constant.GIF, Constant.gifReceivedPathNB, Constant.gifSentPathNB);
+                    break;
+                case Constant.WALLPAPER:
+                    tabsAdapter = new TabsAdapter(getSupportFragmentManager(), Constant.WALLPAPER, Constant.wallReceivedPathNB, Constant.wallSentPathNB);
+                    break;
+                case Constant.VOICE:
+                    tabsAdapter = new TabsAdapter(getSupportFragmentManager(), Constant.VOICE, Constant.voiceReceivedPathNB, Constant.voiceSentPathNB);
+                    break;
+                case Constant.STATUS:
+                    tabsAdapter = new TabsAdapter(getSupportFragmentManager(), Constant.STATUS, Constant.statuscacheNB, Constant.statusdownloadNB);
+                    break;
+                default:
+                    tabsAdapter = new TabsAdapter(getSupportFragmentManager(), Constant.NONDEFAULT, pathname, pathname);
+                    break;
+            }
+        }
+
+        viewPager.setAdapter(tabsAdapter);
+        tabLayout.setupWithViewPager(viewPager);
+        la_back.setOnClickListener(v -> onBackPressed());
+    }
+
+    public void setStatusBar() {
+        Window window = getWindow();
+        
+        if (Build.VERSION.SDK_INT >= 23) {
+            window.getDecorView().setSystemUiVisibility(window.getDecorView().getSystemUiVisibility() | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+            window.setStatusBarColor(ContextCompat.getColor(this, R.color.colorWhite));
+            window.setNavigationBarColor(ContextCompat.getColor(this, R.color.colorWhite));
+        } else if (Build.VERSION.SDK_INT == 21 || Build.VERSION.SDK_INT == 22) {
+            window.setStatusBarColor(ContextCompat.getColor(this, R.color.colorBlack));
+            window.setNavigationBarColor(ContextCompat.getColor(this, R.color.colorBlack));
+        } else {
+            window.clearFlags(0);
+        }
+    }
+
+    public void setStatusBarTheme() {
+        View view = getWindow().getDecorView();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            view.setSystemUiVisibility(view.getSystemUiVisibility() & ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        }
+        getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.darkBlack));
+    }
+}

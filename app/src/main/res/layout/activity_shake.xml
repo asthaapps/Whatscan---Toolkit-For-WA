@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_shake"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <include
+        android:id="@+id/ic_include"
+        layout="@layout/content_toolbar_info" />
+
+    <TextView
+        android:id="@+id/tv_shake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ic_include"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/bold"
+        android:gravity="center"
+        android:padding="7dp"
+        android:text="@string/whats_shake"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textColor="@color/colorBlack" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/shake_switch"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/ic_include"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:thumb="@drawable/switch_thumb"
+        app:track="@drawable/switch_xml" />
+
+    <TextView
+        android:id="@+id/tv_shake_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shake_switch"
+        android:fontFamily="@font/medium"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="@string/enable_to_this_features_to_launch_whatsapp_any_time_to_shake_mobile_phone"
+        android:textColor="@color/colorBlack"
+        android:textSize="12sp" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/la_shake"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_shake_info"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/shake_in" />
+</RelativeLayout>

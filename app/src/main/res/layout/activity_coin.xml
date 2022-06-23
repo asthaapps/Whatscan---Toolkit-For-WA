@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlCoinMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent">
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="140dp">
+
+        <ImageView
+            android:id="@+id/imgBanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/app_image_desc"
+            android:scaleType="centerCrop"
+            android:src="@drawable/coin_banner" />
+
+        <RelativeLayout
+            android:id="@+id/ic_include"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/la_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="3dp"
+                android:src="@drawable/ic_back_white" />
+
+            <TextView
+                android:id="@+id/tv_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_toStartOf="@+id/imgHistory"
+                android:layout_toEndOf="@+id/la_back"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/imgHistory"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="1dp"
+                android:src="@drawable/d_wallet" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_upr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ic_include"
+            android:gravity="center|start">
+
+            <RelativeLayout
+                android:id="@+id/rlProfile"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/round_shape"
+                android:backgroundTint="@color/white">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="53dp"
+                    android:layout_height="53dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_profile"
+                    app:civ_border_color="@color/colorAccent"
+                    app:civ_border_overlay="false"
+                    app:civ_border_width="0dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvTotalCoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/rlProfile"
+                android:fontFamily="@font/medium"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:text="500"
+                android:textColor="@color/colorWhite"
+                android:textSize="23sp" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toEndOf="@+id/tvTotalCoin"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="4dp"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/d_bag" />
+
+            <TextView
+                android:id="@+id/txtHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTotalCoin"
+                android:layout_toEndOf="@+id/rlProfile"
+                android:fontFamily="@font/medium"
+                android:paddingStart="10dp"
+                android:paddingTop="3dp"
+                android:paddingEnd="0dp"
+                android:paddingBottom="5dp"
+                android:text="History >"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_coin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlTop"
+        android:elevation="4dp"
+        android:background="@drawable/dialog_white"
+        app:tabIndicator="@drawable/tab_background"
+        app:tabIndicatorColor="@color/colorAccent"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorHeight="2dp"
+        app:tabRippleColor="@null"
+        app:tabSelectedTextColor="@color/colorAccent"
+        app:tabTextAppearance="@style/TabTextAppearance"
+        app:tabTextColor="@color/colorBlack" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tab_coin"
+        android:background="@color/white" />
+</RelativeLayout>

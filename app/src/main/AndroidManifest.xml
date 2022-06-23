@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.BIND_WALLPAPER"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"
+        tools:ignore="ProtectedPermissions" />
+
+    <queries>
+        <package android:name="com.whatsapp" />
+        <package android:name="com.whatsapp.w4b" />
+    </queries>
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".Util.AppController"
+        android:allowBackup="false"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/logooo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/logooo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="DataExtractionRules,UnusedAttribute"
+        tools:replace="android:allowBackup">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-4610744403189062~7651598388" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/facebook_client_token" />
+
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+
+
+
+        <activity
+            android:name=".Other.CommonWebView"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Other.ActivityProfile"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".AutoResponse.ActivityContactsPicker"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".AutoResponse.ActivityAddCustomReply"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".AutoResponse.ActivityCustomReply"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".AutoResponse.ActivityAutoResponse"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".AutoResponse.ActivityAutoSetting"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".WBubble.ActivityWABubble"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".WBubble.ActivityBubbleSetting"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".WBubble.ChatWindowActivity"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".WBubble.ChatHistoryPreviewActivity"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".WBubble.ChatHistoryActivity"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".WSticker.ActivityStickerMakerList"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".MsgTools.Emoticon.ActivitySubEmoticon"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".MsgTools.Emoticon.ActivityEmoticon"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".User.ActivityVerifyEmail"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".User.ActivityForgotPassword"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+
+        <activity
+            android:name=".Intro.ActivitySplash"
+            android:exported="true"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+
+        <activity
+            android:name=".Other.ActivityLanguage"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Other.ActivityPermission"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Other.ActivitySearch"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".ReferCoin.ActivityCoin"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".ReferCoin.ActivityCoinHistory"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".ReferCoin.ActivityRedemptions"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".ActivityHome"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".ActivityMain"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Ads.ActivityPremium"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Shake.ActivityShake"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/CropTheme" />
+
+        <activity
+            android:name=".WSticker.ActivityStickerSubCategory"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".WSticker.ActivityStickerDetails"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".WSticker.ActivitySticker"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".WSticker.ActivityCustomStickerMaker"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".WSticker.editimage.EditImageActivity"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".WSticker.editimage.EditorActivity"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".WSticker.editimage.BaseActivity"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Prank.FakeChat.ActivityChatAdd"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".MsgTools.Caption.ActivityCaptionStatus"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".MsgTools.Caption.ActivitySubCaption"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".MsgTools.Caption.CaptionEditActivity"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".MsgTools.Caption.ActivityPhotoSlide"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Prank.FakeChat.ActivityFakeChat"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Prank.FakeChat.ActivityCallDetails"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Prank.FakeChat.ActivityFackCalls"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Prank.FakeChat.ActivityFackCallsShow"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Prank.FakeChat.ActivityFackUserChat"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Prank.FakeChat.ActivityEditChatUserProfile"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Prank.FakeChat.ActivityEditMessage"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Prank.FakeChat.DeleteStoryActivity"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Prank.FakeChat.StoriesProgressActivity"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Prank.FakeChat.AddStatusActivity"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".MsgTools.TextRepeater.ActivityTextRepeater"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".MsgTools.MagicText.ActivityMagicText"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".WalkChat.ActivityWalkChat"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".User.ActivityLogin"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".User.ActivityRegister"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".DeletedMedia.ActivityChat"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".DeletedMedia.ActivityDeleteMedia"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".ContactExport.ActivityContactView"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".ContactExport.ActivityContactExport"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".ContactExport.ActivityExport"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Cleaner.ActivityCleaner"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Cleaner.TabLayoutActivity"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Cleaner.TabLayoutBusinessActivity"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".DirectChat.ActivityDirectChat"
+            android:launchMode="standard"
+            android:parentActivityName=".ActivityMain"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Story.ActivityVideoView"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Story.ActivityImageView"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true"
+            android:theme="@style/AppTheme.Purple" />
+
+        <activity
+            android:name=".Web.ActivityPatternLock"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Story.ActivityStorySaver"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Web.ActivityWeb"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Prank.FakeProfile.ViewFakeProfile"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Prank.FakeStory.ViewFakeStory"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Prank.FakeProfile.ActivityFakeProfile"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".Prank.FakeStory.ActivityFakeStory"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".MsgTools.TextToEmoji.ActivityTextToEmoji"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".WChatLocker.ActivityChatLock"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".WChatLocker.ActivityChatLockMain"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".BulkSender.BulkActivityStart"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".BulkSender.BulkActivityNewMessage"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".BulkSender.BulkActivityContactGroupImportContact"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".BulkSender.BulkActivityContactShowList"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".BulkSender.BulkActivityContactView"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".BulkSender.BulkActivityAddGroup"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".BulkSender.BulkActivityCountrySelection"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".BulkSender.BulkActivitySavedMessages"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".BulkSender.BulkActivityGroupList"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".BulkSender.BulkActivitySendingMessage"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".BulkSender.BulkActivityAttachment"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".BulkSender.BulkActivityImportedFiles"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".BulkSender.BulkActivityImportedContact"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".AutoScheduler.ActivityResultScheduler"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".AutoScheduler.ActivityAllEventScheduler"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".AutoScheduler.ActivityScheduleUpdate"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <activity
+            android:name=".AutoScheduler.ActivityEventSchedule"
+            android:launchMode="standard"
+            android:screenOrientation="locked"
+            android:showOnLockScreen="true" />
+
+        <service
+            android:name=".Service.AlarmService"
+            android:exported="false"
+            android:label="Alarm Service"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.automessageforwhatsapp.whatsappmessagescheduler.AlarmService" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".Service.AlarmReceiver"
+            android:exported="true" />
+
+        <service
+            android:name=".Service.MyDownloadService"
+            android:exported="false" />
+
+        <service
+            android:name=".Service.MyUploadService"
+            android:exported="false" />
+
+        <activity android:name=".Prank.ImagePickerActivity" />
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name=".Service.WpBShakeService"
+            android:enabled="true" />
+
+        <service
+            android:name=".Service.WpShakeService"
+            android:enabled="true" />
+
+        <service
+            android:name=".Service.WhatsappAccessibilitySchedulerService"
+            android:enabled="true"
+            android:exported="true"
+            android:label="Whatscan :- AutoScheduler"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/whatsapp_scheduler" />
+        </service>
+
+        <service
+            android:name=".Service.WhatsappAccessibility"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/whatsapp_service" />
+        </service>
+
+        <service
+            android:name=".Service.BasicAccessibilityService"
+            android:exported="false"
+            android:label="@string/whatstool_walk"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/service_config" />
+        </service>
+
+        <service
+            android:name=".Notification.MessagingService"
+            android:exported="false"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".Service.ChatHeadService"
+            android:windowSoftInputMode="adjustResize|stateVisible" />
+
+        <service
+            android:name=".Service.MainService"
+            android:windowSoftInputMode="adjustResize|stateVisible" />
+
+        <service
+            android:name=".Service.AllNotificationService"
+            android:exported="false"
+            android:label="WhatsTool"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"
+                tools:replace="android:resource" />
+        </provider>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.whatscan.toolkit.forwa.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <provider
+            android:name=".StickerContentProvider"
+            android:authorities="${contentProviderAuthority}"
+            android:enabled="true"
+            android:exported="true"
+            android:readPermission="com.whatsapp.sticker.READ" />
+    </application>
+</manifest>

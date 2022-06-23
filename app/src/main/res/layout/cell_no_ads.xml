@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15sp"
+        android:background="@drawable/shape_ads">
+
+        <TextView
+            android:id="@+id/offer_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/offer_crown"
+            android:fontFamily="@font/regular"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="1dp"
+            android:text="Get Whatscan use"
+            android:textSize="11sp"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/offer_percent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/offer_title"
+            android:layout_toEndOf="@id/offer_crown"
+            android:fontFamily="@font/bold"
+            android:paddingStart="10sp"
+            android:paddingTop="1dp"
+            android:paddingEnd="10sp"
+            android:text="No Ads"
+            android:textColor="@color/colorBlack"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/offer_sub_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/offer_percent"
+            android:layout_toEndOf="@id/offer_crown"
+            android:fontFamily="@font/medium"
+            android:paddingStart="10sp"
+            android:paddingTop="1dp"
+            android:paddingEnd="10sp"
+            android:text="Enjoy the Ads free Whatscan"
+            android:textColor="@color/colorBlack"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/offer_crown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:padding="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/p_no_ads" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_required_plan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15sp"
+        android:background="@drawable/offer_top"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/offer_top_icon"
+            android:layout_width="24sp"
+            android:layout_height="24sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="2dp"
+            android:padding="1dp"
+            android:src="@drawable/d_pre" />
+
+        <TextView
+            android:id="@+id/offer_top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15sp"
+            android:fontFamily="@font/medium"
+            android:text="PLAN REQUIRED"
+            android:textColor="#588CBA"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</RelativeLayout>

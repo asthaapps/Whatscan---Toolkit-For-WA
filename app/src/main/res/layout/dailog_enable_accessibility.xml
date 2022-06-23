@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlEnableA"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:padding="3dp">
+
+    <TextView
+        android:id="@+id/txtOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/medium"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="@string/enable_accessibility_permission"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/infoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="5dp"
+        android:text="@string/accessibility_enable"
+        android:textSize="12sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/continueButton"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:layout_gravity="end"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_light"
+        android:fontFamily="@font/medium"
+        android:text="@string/continue1"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white" />
+</LinearLayout>

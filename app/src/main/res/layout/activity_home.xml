@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home_started"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+
+    <TextView
+        android:id="@+id/tv_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/bold"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="4dp"
+        android:text="@string/skip_gt_gt"
+        android:textColor="@color/colorTools"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12sp"
+        android:layout_marginTop="15sp"
+        android:padding="10dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ic_logo"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/app_image_desc"
+            android:src="@drawable/logo"
+            app:riv_corner_radius="7dp" />
+
+        <TextView
+            android:id="@+id/tv_name_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/ic_logo"
+            android:fontFamily="@font/ballo"
+            android:text="Whatscan"
+            android:textColor="@color/Black"
+            android:textSize="21sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_top"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/medium"
+        android:paddingStart="15sp"
+        android:paddingEnd="1dp"
+        android:text="@string/welcome_back"
+        android:textColor="@color/Black"
+        android:textSize="17sp" />
+
+    <com.smarteist.autoimageslider.SliderView
+        android:id="@+id/imageSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_fade"
+        android:layout_below="@+id/tv_text"
+        android:paddingStart="10dp"
+        android:paddingTop="30dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="30dp"
+        app:sliderAnimationDuration="600"
+        app:sliderAutoCycleDirection="back_and_forth"
+        app:sliderAutoCycleEnabled="true"
+        app:sliderIndicatorAnimationDuration="600"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorMargin="15dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="3dp"
+        app:sliderIndicatorRadius="1.5dp"
+        app:sliderIndicatorSelectedColor="@color/colorTools"
+        app:sliderIndicatorUnselectedColor="#F5F6F8"
+        app:sliderScrollTimeInSec="1"
+        app:sliderStartAutoCycle="true" />
+
+
+    <TextView
+        android:id="@+id/tv_fade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_text4"
+        android:layout_marginStart="14dp"
+        android:fontFamily="@font/bold"
+        android:lines="2"
+        android:padding="5dp"
+        android:text="@string/get_ready_for_your_lifetime_journey"
+        android:textColor="@color/colorBlack"
+        android:textSize="23sp" />
+
+    <TextView
+        android:id="@+id/tv_text4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_language"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="15sp"
+        android:fontFamily="@font/medium"
+        android:padding="5dp"
+        android:text="TRUSTED BY 1+ MILLIONS BUSINESSES "
+        android:textColor="@color/colorBlack"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_already"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_border_lang"
+        android:drawablePadding="11dp"
+        android:fontFamily="@font/bold"
+        android:paddingStart="30dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="10dp"
+        android:text=""
+        android:textColor="@color/Black"
+        android:textSize="14sp"
+        app:drawableEndCompat="@drawable/down_lang" />
+
+    <TextView
+        android:id="@+id/tv_already"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_started"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/medium"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text=""
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_started"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_light_home"
+        android:fontFamily="@font/bold"
+        android:gravity="center"
+        android:padding="19sp"
+        android:text="@string/get_started_for_free"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+
+
+</RelativeLayout>

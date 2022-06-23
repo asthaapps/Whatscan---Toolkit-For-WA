@@ -1,0 +1,9 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/color_panel_more"
+    android:layout_width="wrap_content"
+    android:layout_height="45dp"
+    android:gravity="center"
+    android:padding="5dp"
+    android:text="@string/more"
+    android:textColor="@color/colorBlack"
+    android:textStyle="bold" />

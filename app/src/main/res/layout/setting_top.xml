@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:elevation="10dp"
+        android:src="@drawable/ic_profile"
+        app:riv_border_width="0.6dp"
+        app:riv_corner_radius="9dp" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@+id/imgProfile"
+        android:background="@drawable/button_light"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/medium"
+            android:gravity="center"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/sign_up"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/imgProfile"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/bold"
+            android:paddingStart="5dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="2dp"
+            android:text=""
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_username"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/regular"
+            android:paddingStart="5dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="2dp"
+            android:text=""
+            android:textColor="@color/colorBlack"
+            android:textSize="11.0sp" />
+
+        <TextView
+            android:id="@+id/tv_toolId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_email"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/regular"
+            android:paddingStart="5dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="2dp"
+            android:text=""
+            android:textColor="@color/colorBlack"
+            android:textSize="11.0sp" />
+
+        <ImageView
+            android:id="@+id/toolIdCopy"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_below="@+id/tv_email"
+            android:layout_toEndOf="@+id/tv_toolId"
+            android:contentDescription="@string/app_image_desc"
+            android:src="@drawable/d_copy" />
+    </RelativeLayout>
+</RelativeLayout>

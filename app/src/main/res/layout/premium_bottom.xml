@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/bottom_blur">
+
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radio_btn_monthly"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_weight="1.0"
+            android:button="@null"
+            android:checked="true"
+            android:fontFamily="@font/medium"
+            android:gravity="center"
+            android:text="Monthly" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radio_btn_yearly"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_weight="1.0"
+            android:button="@null"
+            android:fontFamily="@font/medium"
+            android:gravity="center"
+            android:text="Yearly" />
+    </RadioGroup>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/la_info_plan"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/info" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_plan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radio_group"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        tools:ignore="ContentDescription">
+
+        <RelativeLayout
+            android:id="@+id/rl_classic"
+            android:layout_width="115dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/border_bottom">
+
+            <RelativeLayout
+                android:id="@+id/rl_classic_design"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:background="@drawable/design_bg"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/bold"
+                    android:padding="4dp"
+                    android:text="Save 20%"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/icon_1"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_below="@+id/rl_classic_design"
+                android:layout_centerHorizontal="true"
+                android:padding="2dp"
+                android:src="@drawable/d_class" />
+
+            <TextView
+                android:id="@+id/tv_classic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icon_1"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/bold"
+                android:padding="5dp"
+                android:text="Classic"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/price_classic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_classic"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/medium"
+                android:padding="2dp"
+                android:text="₹2,399"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/duration_classic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/price_classic"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/medium"
+                android:text="Monthly"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_premium"
+            android:layout_width="115dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/rl_classic"
+            android:background="@drawable/border_bottom_select1"
+            android:focusable="true">
+
+            <RelativeLayout
+                android:id="@+id/rl_premium_design"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:background="@drawable/design_bg1"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/bold"
+                    android:padding="4dp"
+                    android:text="Most valuable!"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/icon_2"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_below="@+id/rl_premium_design"
+                android:layout_centerHorizontal="true"
+                android:padding="2dp"
+                android:src="@drawable/d_pre" />
+
+            <TextView
+                android:id="@+id/tv_premium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icon_2"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/bold"
+                android:padding="5dp"
+                android:text="Premium"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/price_premium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_premium"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/medium"
+                android:padding="2dp"
+                android:text="$18.99"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/duration_premium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/price_premium"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/medium"
+                android:text="Monthly"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_master"
+            android:layout_width="115dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/rl_premium"
+            android:background="@drawable/border_bottom">
+
+            <RelativeLayout
+                android:id="@+id/rl_master_design"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:background="@drawable/design_bg2"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/bold"
+                    android:padding="4dp"
+                    android:text="Save 45%"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/icon_3"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_below="@+id/rl_master_design"
+                android:layout_centerHorizontal="true"
+                android:padding="2dp"
+                android:src="@drawable/d_master" />
+
+            <TextView
+                android:id="@+id/tv_master"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icon_3"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/bold"
+                android:padding="5dp"
+                android:text="Master"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/price_master"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_master"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/medium"
+                android:padding="2dp"
+                android:text="$21.99"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/duration_master"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/price_master"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/medium"
+                android:text="Monthly"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bt_subscribe"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rl_plan"
+        android:layout_gravity="end|center"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15sp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="15sp"
+        android:background="@drawable/button_light"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txtSendMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/medium"
+            android:gravity="center"
+            android:text="@string/subscribe_now"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlTerm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txt_term"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingStart="35dp"
+            android:paddingEnd="35dp"
+            android:text=""
+            android:textColor="@color/colorBlack"
+            android:textSize="13sp" />
+    </RelativeLayout>
+</RelativeLayout>

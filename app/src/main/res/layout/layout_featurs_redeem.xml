@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rlBulkOneDay"
+            android:layout_width="175dp"
+            android:layout_height="240dp"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:id="@+id/imgFive"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_image_desc"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_ticket_new" />
+
+            <ImageView
+                android:id="@+id/icBulkOne"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="8dp"
+                android:src="@drawable/w_bulk" />
+
+            <TextView
+                android:id="@+id/txtBulkOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icBulkOne"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingTop="20dp"
+                android:text="Bulk Sender"
+                android:textColor="@color/Black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txtSeven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtBulkOne"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="Use tool for \n 1 day"
+                android:textColor="@color/Black"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:text="REDEEM"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:contentDescription="@string/app_image_desc"
+                    android:padding="4dp"
+                    android:src="@drawable/d_bag" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium"
+                    android:maxLines="1"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="10dp"
+                    android:text="800"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlBulkSevenDay"
+            android:layout_width="175dp"
+            android:layout_height="240dp"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:id="@+id/imgSix"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_image_desc"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_ticket_new" />
+
+            <ImageView
+                android:id="@+id/icBulkTwo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="8dp"
+                android:src="@drawable/w_bulk" />
+
+            <TextView
+                android:id="@+id/txtBulkSeven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icBulkTwo"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingTop="20dp"
+                android:text="Bulk Sender"
+                android:textColor="@color/Black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txtEight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtBulkSeven"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="Use tool for \n 7 day"
+                android:textColor="@color/Black"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:text="REDEEM"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:contentDescription="@string/app_image_desc"
+                    android:padding="4dp"
+                    android:src="@drawable/d_bag" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium"
+                    android:maxLines="1"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="10dp"
+                    android:text="4200"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rlAutoOneDay"
+            android:layout_width="175dp"
+            android:layout_height="240dp"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:id="@+id/imgSeven"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_image_desc"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_ticket_new" />
+
+            <ImageView
+                android:id="@+id/icAutoResOne"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="10dp"
+                android:src="@drawable/w_auto" />
+
+            <TextView
+                android:id="@+id/txtAutoResOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icAutoResOne"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="Auto Response"
+                android:textColor="@color/Black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txtNine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAutoResOne"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="Use tool for \n 1 day"
+                android:textColor="@color/Black"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:text="REDEEM"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:contentDescription="@string/app_image_desc"
+                    android:padding="4dp"
+                    android:src="@drawable/d_bag" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium"
+                    android:maxLines="1"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="10dp"
+                    android:text="700"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlAutoSevenDay"
+            android:layout_width="175dp"
+            android:layout_height="240dp"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:id="@+id/imgEight"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_image_desc"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_ticket_new" />
+
+            <ImageView
+                android:id="@+id/icAutoResTwo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="10dp"
+                android:src="@drawable/w_auto" />
+
+            <TextView
+                android:id="@+id/txtAutoResSeven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icAutoResTwo"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="Auto Response"
+                android:textColor="@color/Black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txtTen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAutoResSeven"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="Use tool for \n 7 day"
+                android:textColor="@color/Black"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:text="REDEEM"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:contentDescription="@string/app_image_desc"
+                    android:padding="4dp"
+                    android:src="@drawable/d_bag" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium"
+                    android:maxLines="1"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="10dp"
+                    android:text="3800"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rlBulkExcelOneDay"
+            android:layout_width="175dp"
+            android:layout_height="240dp"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:id="@+id/imgNine"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_image_desc"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_ticket_new" />
+
+            <ImageView
+                android:id="@+id/icExcelOne"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="8dp"
+                android:src="@drawable/w_export" />
+
+            <TextView
+                android:id="@+id/txtImportOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icExcelOne"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="10dp"
+                android:text="Bulk Sender Import \n From Excel"
+                android:textColor="@color/Black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txtEleven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtImportOne"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="Use tool for \n 1 day"
+                android:textColor="@color/Black"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:text="REDEEM"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:contentDescription="@string/app_image_desc"
+                    android:padding="4dp"
+                    android:src="@drawable/d_bag" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium"
+                    android:maxLines="1"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="10dp"
+                    android:text="1200"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlBulkExcelSevenDay"
+            android:layout_width="175dp"
+            android:layout_height="240dp"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:id="@+id/imgTen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_image_desc"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_ticket_new" />
+
+            <ImageView
+                android:id="@+id/icExcelTwo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="8dp"
+                android:src="@drawable/w_export" />
+
+            <TextView
+                android:id="@+id/txtImportSeven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icExcelTwo"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="10dp"
+                android:text="Bulk Sender Import \n From Excel"
+                android:textColor="@color/Black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txtTweleve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtImportSeven"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="Use tool for \n 7 day"
+                android:textColor="@color/Black"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:text="REDEEM"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:contentDescription="@string/app_image_desc"
+                    android:padding="4dp"
+                    android:src="@drawable/d_bag" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium"
+                    android:maxLines="1"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="10dp"
+                    android:text="5600"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

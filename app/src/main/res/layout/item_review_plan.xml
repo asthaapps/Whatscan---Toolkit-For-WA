@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="308dp"
+    android:layout_height="155dp"
+    android:layout_margin="10dp"
+    android:padding="8dp"
+    android:id="@+id/rl_adp_review"
+    android:background="@drawable/shape_white">
+
+    <RelativeLayout
+        android:id="@+id/rl_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_shape">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_profile"
+            app:civ_border_overlay="false" />
+
+        <ImageView
+            android:id="@+id/imgGallery"
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/round_menu"
+            android:contentDescription="@string/app_image_desc"
+            android:padding="2dp"
+            android:src="@drawable/d_camera" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgRate"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_toEndOf="@+id/rl_icon"
+        android:contentDescription="@string/app_image_desc"
+        android:paddingStart="1dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="20sp"
+        android:src="@drawable/plan_rating" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgRate"
+        android:layout_marginStart="9dp"
+        android:layout_toEndOf="@+id/rl_icon"
+        android:fontFamily="@font/bold"
+        android:gravity="center"
+        android:paddingStart="1dp"
+        android:paddingEnd="20sp"
+        android:text="John Doe"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_icon"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/medium"
+        android:paddingStart="1dp"
+        android:maxLines="5"
+        android:paddingEnd="20sp"
+        android:text="Do not struggle with the crowd. Stand apart with this app and get going on the go. Easy to set up and easy to use. Can't ask for better. The UI is sleek and functional. Significant relief for the novices to set up bulk sending on WhatsApp. Thanks to the developers for this app."
+        android:textColor="#4D000000"
+        android:textSize="11sp" />
+
+</RelativeLayout>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_text_repeater"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".MsgTools.TextRepeater.ActivityTextRepeater">
+
+    <include
+        android:id="@+id/ic_include"
+        layout="@layout/content_toolbar_info" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_banner"
+        android:layout_below="@+id/ic_include"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input1"
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="60.0dp"
+                    android:layout_margin="10.0dp"
+                    app:boxStrokeColor="@color/colorTools">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/text_repeat"
+                        android:inputType="textCapWords"
+                        android:paddingStart="10.0dp"
+                        android:paddingEnd="10.0dp"
+                        android:textColor="@color/colorBlack" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input2"
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="60.0dp"
+                    android:layout_margin="10.0dp"
+                    app:boxStrokeColor="@color/colorTools">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/emojeeTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/text_repeat_num"
+                        android:inputType="textCapWords"
+                        android:paddingStart="10.0dp"
+                        android:paddingEnd="10.0dp"
+                        android:textColor="@color/colorBlack" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/convertEmojeeBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="31dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/button_light"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/bold"
+                    android:minHeight="0dp"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/repeat"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtNewLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/btnNewLine"
+                        android:text="@string/text_new_line"
+                        android:textColor="@color/colorTools"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/btnNewLine"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_image_desc"
+                        android:src="@drawable/text_on" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_edit_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/editedTextlayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="10.0dp"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp"
+                        app:cardUseCompatPadding="true">
+
+                        <EditText
+                            android:id="@+id/convertedEmojeeTxt"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center"
+                            android:autofillHints="@string/app_name"
+                            android:background="@color/colorWhite"
+                            android:inputType="textMultiLine"
+                            android:padding="10dp"
+                            android:scrollbars="vertical"
+                            android:textSize="12sp" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20.0dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bt_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8.0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_light"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bold"
+                    android:minHeight="0dp"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/btn_clear"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bt_copy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8.0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_light"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bold"
+                    android:minHeight="0dp"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/btn_copy"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bt_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8.0dp"
+                    android:layout_marginEnd="5.0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_light"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bold"
+                    android:minHeight="0dp"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/btn_share"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/dialog_black"
+        android:elevation="10dp"
+        android:visibility="gone">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/la_magic"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_above="@+id/tv_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/magic" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_tip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="@string/wait_magic_is_happening_for_pranking_a_friend"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/regular"
+            android:gravity="center"
+            android:text="@string/tip_make_a_fake_story_take_screenshot_and_prank_your_frineds" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" />
+</RelativeLayout>

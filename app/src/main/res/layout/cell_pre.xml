@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15sp"
+        android:background="@drawable/shape_classic">
+
+        <RelativeLayout
+            android:id="@+id/rl_bulk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15sp"
+            android:layout_marginTop="20sp"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/icon_bulk"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/w_bulk" />
+
+
+            <TextView
+                android:id="@+id/bulk_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@id/icon_bulk"
+                android:fontFamily="@font/bold"
+                android:paddingStart="10sp"
+                android:paddingTop="1dp"
+                android:paddingEnd="10sp"
+                android:text="@string/bulk_automatic_sender"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/bulk_sub_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bulk_title"
+                android:layout_marginStart="6dp"
+                android:layout_toEndOf="@id/icon_bulk"
+                android:fontFamily="@font/medium"
+                android:paddingStart="10sp"
+                android:paddingTop="1dp"
+                android:paddingEnd="10sp"
+                android:text="Send you unlimited automatic forwarding to multiple contacts via WhatsApp in a single tap."
+                android:textColor="#B8FFFFFF"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_export"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_bulk"
+            android:layout_marginStart="15sp"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/icon_export"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/w_export" />
+
+
+            <TextView
+                android:id="@+id/export_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@id/icon_export"
+                android:fontFamily="@font/bold"
+                android:paddingStart="10sp"
+                android:paddingTop="1dp"
+                android:paddingEnd="10sp"
+                android:text="@string/export"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/export_sub_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/export_title"
+                android:layout_marginStart="6dp"
+                android:layout_toEndOf="@id/icon_export"
+                android:fontFamily="@font/medium"
+                android:paddingStart="10sp"
+                android:paddingTop="1dp"
+                android:paddingEnd="10sp"
+                android:text="Export all your contacts from WhatsApp or your device in one click to a comma-separated file (CSV)."
+                android:textColor="#B8FFFFFF"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_export"
+            android:layout_marginStart="15sp"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/icon_auto"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/w_auto" />
+
+
+            <TextView
+                android:id="@+id/auto_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@id/icon_auto"
+                android:fontFamily="@font/bold"
+                android:paddingStart="10sp"
+                android:paddingTop="1dp"
+                android:paddingEnd="10sp"
+                android:text="@string/auto_response"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/auto_sub_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/auto_title"
+                android:layout_marginStart="6dp"
+                android:layout_toEndOf="@id/icon_auto"
+                android:fontFamily="@font/medium"
+                android:paddingStart="10sp"
+                android:paddingTop="1dp"
+                android:paddingEnd="10sp"
+                android:text="It can send replies automatically to persons, groups, and clients and create a campaign."
+                android:textColor="#B8FFFFFF"
+                android:textSize="10sp"
+                tools:ignore="SmallSp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_recover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_auto"
+            android:layout_marginStart="15sp"
+            android:layout_marginBottom="15sp"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/icon_recover"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/w_recover" />
+
+            <TextView
+                android:id="@+id/recover_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@id/icon_recover"
+                android:fontFamily="@font/bold"
+                android:paddingStart="10sp"
+                android:paddingTop="1dp"
+                android:paddingEnd="10sp"
+                android:text="@string/deleted_message"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/recover_sub_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recover_title"
+                android:layout_marginStart="6dp"
+                android:layout_toEndOf="@id/icon_recover"
+                android:fontFamily="@font/medium"
+                android:paddingStart="10sp"
+                android:paddingTop="1dp"
+                android:paddingEnd="10sp"
+                android:text="Messages and media files by scanning your notifications and showing them after delete by another end contact."
+                android:textColor="#B8FFFFFF"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_classic_required"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15sp"
+        android:background="@drawable/offer_top"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/offer_top_icon"
+            android:layout_width="24sp"
+            android:layout_height="24sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="2dp"
+            android:padding="1dp"
+            android:src="@drawable/d_class" />
+
+        <TextView
+            android:id="@+id/offer_top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15sp"
+            android:fontFamily="@font/medium"
+            android:text="CLASSIC REQUIRED"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</RelativeLayout>

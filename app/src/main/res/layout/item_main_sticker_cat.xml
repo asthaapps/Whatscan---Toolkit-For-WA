@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlSticker"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_margin="5.0dp"
+    android:background="#97F6F6F6">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_cat"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10.0dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true" />
+
+    <TextView
+        android:id="@+id/txt_cat_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10.0dp"
+        android:layout_marginRight="10.0dp"
+        android:layout_toStartOf="@+id/ll_open"
+        android:layout_toEndOf="@+id/lottie_cat"
+        android:fontFamily="@font/medium"
+        android:gravity="center_vertical"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="@string/app_name"
+        android:textColor="@color/colorBlack"
+        android:textSize="14.0sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_open"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10.0dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="30.0dp"
+            android:layout_height="30.0dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_light"
+            android:contentDescription="@string/app_image_desc"
+            android:gravity="center"
+            android:src="@drawable/ic_baseline_navigate_next_24_white" />
+    </LinearLayout>
+</RelativeLayout>

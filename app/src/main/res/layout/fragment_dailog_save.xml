@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlQuickReply"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/medium"
+            android:padding="10dp"
+            android:text="@string/fragment_dailog_save_title_text"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/country_code_text_view"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:focusable="false"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:text="@string/nineone"
+                    android:textColor="@color/colorBlack" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input1"
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:boxStrokeColor="@color/colorTools">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/hashTagEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/phoneNumber"
+                        android:inputType="phone"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input2"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:boxStrokeColor="@color/colorTools">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/contactnameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input3"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="12dp"
+                app:boxStrokeColor="@color/colorTools">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/messageEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/fragment_dailog_save_nameEditText_hint"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_vertical|end"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/save_button"
+                    android:layout_width="80.0dp"
+                    android:layout_height="35.0dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/button_light"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:text="@string/save"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15.0sp" />
+
+                <TextView
+                    android:id="@+id/cancel_button"
+                    android:layout_width="80.0dp"
+                    android:layout_height="35.0dp"
+                    android:background="@drawable/button_light"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:text="@string/cancel"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlLogin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:padding="3dp">
+
+    <TextView
+        android:id="@+id/txtOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/medium"
+        android:padding="15dp"
+        android:text="@string/all_access_files"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:letterSpacing="0.01"
+        android:padding="10dp"
+        android:text="@string/all_files_access_is_a_special_permission_only_allowed_for_few_functionality_like_status_saver_bulk_sender_etc_nif_you_have_allow_this_permission_to_use_this_application"
+
+        android:textSize="14sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_allow_access"
+        android:layout_width="180dp"
+        android:layout_height="38dp"
+        android:layout_gravity="end"
+        android:layout_margin="15dp"
+        android:background="@drawable/button_light"
+        android:fontFamily="@font/medium"
+        android:text="@string/allow_access"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp" />
+</LinearLayout>

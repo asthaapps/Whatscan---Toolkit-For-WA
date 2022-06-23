@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_register"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:id="@+id/la_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_back_arrow"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_text"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/bold"
+            android:paddingTop="15sp"
+            android:paddingBottom="2dp"
+            android:text="@string/hello"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/la_login"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/medium"
+            android:text="@string/please_fill_in_to_sign_up_new_account"
+            android:textColor="@color/colorTools"
+            android:textSize="14sp" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/la_login"
+            android:layout_width="190dp"
+            android:layout_height="110dp"
+            android:layout_below="@+id/rl_register"
+            android:layout_alignParentEnd="true"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/login" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mtf_name"
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/tv_text"
+            android:layout_margin="10.0dp"
+            app:boxStrokeColor="@color/colorTools">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autofillHints="@string/first_name"
+                android:hint="@string/first_name"
+                android:inputType="textAutoComplete"
+                android:lines="1"
+                android:paddingStart="10.0dp"
+                android:paddingEnd="10.0dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mtf_name"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/ll_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/la_earth"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/earth" />
+
+                <ImageView
+                    android:id="@+id/iv_flag"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:visibility="gone"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_country_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/tv_country_code"
+                android:fontFamily="@font/bold"
+                android:text="@string/select_country"
+                android:textColor="@color/colorTools"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_country_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="3dp"
+                android:layout_toEndOf="@+id/ll_icon"
+                android:fontFamily="@font/bold"
+                android:text="@string/nineone"
+                android:textColor="@color/colorTools"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mtf_mobile"
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/rl_country"
+            android:layout_margin="10.0dp"
+            app:boxStrokeColor="@color/colorTools">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autofillHints="@string/mobile_no"
+                android:hint="@string/mobile_no"
+                android:inputType="number"
+                android:lines="1"
+                android:paddingStart="10.0dp"
+                android:paddingEnd="10.0dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mtf_email"
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/mtf_mobile"
+            android:layout_margin="10.0dp"
+            app:boxStrokeColor="@color/colorTools">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_mail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autofillHints="@string/email"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:lines="1"
+                android:paddingStart="10.0dp"
+                android:paddingEnd="10.0dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mtf_email"
+            android:layout_margin="10.0dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mtf_pass"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:boxStrokeColor="@color/colorTools">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_Pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:autofillHints="@string/caption"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:lines="1"
+                    android:paddingStart="10.0dp"
+                    android:paddingEnd="10.0dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/pass_show_hide"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/app_image_desc"
+                android:onClick="ShowHidePass"
+                android:padding="7dp"
+                android:src="@drawable/pass_hide" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlpassC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlpass"
+            android:layout_margin="10.0dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mtf_CPass"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:boxStrokeColor="@color/colorTools">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_CPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:autofillHints="@string/confirm_password"
+                    android:hint="@string/confirm_password"
+                    android:inputType="textPassword"
+                    android:lines="1"
+                    android:paddingStart="10.0dp"
+                    android:paddingEnd="10.0dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/pass_show_hideC"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/app_image_desc"
+                android:onClick="ShowHidePassC"
+                android:padding="7dp"
+                android:src="@drawable/pass_hide" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/bt_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlpassC"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_light"
+            android:elevation="5dp"
+            android:gravity="center"
+            android:padding="3dp"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/hand_shake" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bold"
+                android:padding="3dp"
+                android:text="@string/sign_up"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

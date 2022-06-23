@@ -1,0 +1,160 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlImageEdit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorWhite"
+        android:elevation="2dp">
+
+        <ImageView
+            android:id="@+id/la_back"
+            android:layout_width="28dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_back_arrow"/>
+
+        <TextView
+            android:id="@+id/tv_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10.0dp"
+            android:layout_toStartOf="@+id/redo_uodo_panel"
+            android:layout_toEndOf="@+id/la_back"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:text="@string/edit_image"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/redo_uodo_panel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/banner_flipper"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <ImageView
+                android:id="@+id/uodo_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:src="@drawable/ic_undo_dark" />
+
+            <ImageView
+                android:id="@+id/redo_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/app_image_desc"
+                android:src="@drawable/ic_redo_dark" />
+        </LinearLayout>
+
+        <ViewFlipper
+            android:id="@+id/banner_flipper"
+            android:layout_width="60.0dp"
+            android:layout_height="30.0dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/button_light"
+            android:flipInterval="1000"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/save_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:text="@string/next"
+                android:textColor="@color/colorWhite"
+                android:textSize="14.0sp" />
+
+            <TextView
+                android:id="@+id/apply"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:text="@string/apply"
+                android:textColor="@color/colorWhite"
+                android:textSize="14.0sp" />
+        </ViewFlipper>
+    </RelativeLayout>
+
+    <com.whatscan.toolkit.forwa.WSticker.editimage.view.CustomViewPager
+        android:id="@+id/bottom_gallery"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_above="@+id/ll_banner"
+        android:background="@color/colorWhite"
+        android:elevation="10dp"
+        android:overScrollMode="never" />
+
+    <FrameLayout
+        android:id="@+id/work_space"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottom_gallery"
+        android:layout_below="@id/banner">
+
+        <com.whatscan.toolkit.forwa.WSticker.editimage.view.imagezoom.ImageViewTouch
+            android:id="@+id/main_image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center" />
+
+        <com.whatscan.toolkit.forwa.WSticker.editimage.view.StickerView
+            android:id="@+id/sticker_panel"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <com.whatscan.toolkit.forwa.WSticker.editimage.view.CropImageView
+            android:id="@+id/crop_panel"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <com.whatscan.toolkit.forwa.WSticker.editimage.view.RotateImageView
+            android:id="@+id/rotate_panel"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <com.whatscan.toolkit.forwa.WSticker.editimage.view.TextStickerView
+            android:id="@+id/text_sticker_panel"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <com.whatscan.toolkit.forwa.WSticker.editimage.view.CustomPaintView
+            android:id="@+id/custom_paint_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" />
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlInvitation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:padding="15dp"
+        android:text="Apply Invitation Code"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp"
+        android:text="Invalid invitation code, Please Re-enter Code!"
+        android:textColor="@color/Red"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <com.mukesh.OtpView
+        android:id="@+id/otpView"
+        style="@style/OtpWidget.OtpView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_error"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:cursorVisible="true"
+        android:gravity="center"
+        android:inputType="text"
+        android:visibility="visible"
+        app:OtpState_filled="true"
+        app:itemCount="8"
+        app:itemWidth="32dp"
+        app:lineColor="@color/colorTools"
+        app:viewType="line" />
+
+    <TextView
+        android:id="@+id/txtOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/otpView"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="By applying the invitation code, you and your friend will both earn coins as a reward."
+        android:textSize="14sp" />
+</RelativeLayout>

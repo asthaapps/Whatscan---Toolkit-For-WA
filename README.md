@@ -1,2 +1,2 @@
-# Whatscan---Toolkit-For-WA
-Whatscan
+# WhatsTool
+Project for WhatsApp tools

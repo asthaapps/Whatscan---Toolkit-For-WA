@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llExport"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/medium"
+        android:padding="15dp"
+        android:text="@string/export_as"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtCSV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="CSV"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        app:drawableStartCompat="@drawable/ic_csv" />
+
+    <TextView
+        android:id="@+id/txtHTML"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="HTML"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        app:drawableStartCompat="@drawable/ic_html" />
+
+    <TextView
+        android:id="@+id/txtPDF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="PDF"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        app:drawableStartCompat="@drawable/ic_pdf" />
+
+    <TextView
+        android:id="@+id/txtVCF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="VCF"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        app:drawableStartCompat="@drawable/ic_vcf" />
+
+    <TextView
+        android:id="@+id/txtJSON"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="JSON"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        app:drawableStartCompat="@drawable/ic_json" />
+
+    <TextView
+        android:id="@+id/txtXML"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="XML"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        app:drawableStartCompat="@drawable/ic_xml" />
+
+    <TextView
+        android:id="@+id/txtTXT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="TXT"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        app:drawableStartCompat="@drawable/ic_txt" />
+
+    <TextView
+        android:id="@+id/txtCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_light"
+        android:fontFamily="@font/medium"
+        android:paddingStart="18dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="8dp"
+        android:text="@string/cancel"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+</LinearLayout>

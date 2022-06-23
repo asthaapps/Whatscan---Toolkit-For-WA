@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlUpgradeP"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:padding="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/button_light"
+            android:contentDescription="@string/app_image_desc"
+            android:src="@drawable/ic_close2" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/medium"
+        android:gravity="center_horizontal"
+        android:maxLines="2"
+        android:padding="15dp"
+        android:text="@string/upgrade_to_premium"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/freeTrialTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:letterSpacing="0.01"
+        android:padding="10dp"
+        android:text="Automatic Sending is available under Essential and Premium Plan"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/freeTrialLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/startUpgradeButton"
+            android:layout_width="150dp"
+            android:layout_height="38dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_light"
+            android:fontFamily="@font/medium"
+            android:text="@string/subscribe_now"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/startWatchAds"
+            android:layout_width="150dp"
+            android:layout_height="38dp"
+            android:layout_gravity="end"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/button_light"
+            android:fontFamily="@font/medium"
+            android:text="@string/watch_ads"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>

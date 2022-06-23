@@ -1,0 +1,240 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+
+    signingConfigs {
+        release {
+            storeFile file('E:\\Astha Technology\\Whatscan - Toolkit For WA\\KeyStore\\whatscan_toolkit.jks')
+            storePassword 'whatscan_toolkit'
+            keyAlias 'whatscan_toolkit'
+            keyPassword 'whatscan_toolkit'
+        }
+    }
+    dexOptions {
+        preDexLibraries true
+        javaMaxHeapSize "4G"
+    }
+
+
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
+
+    compileSdkVersion 33
+
+    defaultConfig {
+        configurations.all {
+            resolutionStrategy { force 'androidx.core:core-ktx:1.6.0' }
+        }
+        applicationId "com.whatscan.toolkit.forwa"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 9
+        versionName "1.0.10"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        def contentProviderAuthority = applicationId + ".StickerContentProvider"
+        // Creates a placeholder property to use in the manifest.
+        manifestPlaceholders = [contentProviderAuthority: contentProviderAuthority]
+        // Adds a new field for the authority to the BuildConfig class.
+        buildConfigField("String", "CONTENT_PROVIDER_AUTHORITY", "\"${contentProviderAuthority}\"")
+        signingConfig signingConfigs.release
+    }
+    buildTypes {
+        lintOptions {
+            abortOnError false
+        }
+        applicationVariants.all { variant ->
+            variant.javaCompileProvider.get().doLast {
+              runSecurity(variant)
+            }
+        }
+
+        java {
+            sourceCompatibility = JavaVersion.VERSION_1_8
+            targetCompatibility = JavaVersion.VERSION_1_8
+        }
+
+        namespace 'com.whatscan.toolkit.forwa'
+    }
+}
+def runSecurity(variant) {
+    copy {
+        from "$projectDir/allatori.xml"
+        into "$buildDir/intermediates/classes/"
+        expand(classesRoot: variant.javaCompile.destinationDir,
+                kotlinRoot: "${buildDir}/tmp/kotlin-classes/${variant.name}",
+                androidJar: "${android.sdkDirectory}/platforms/${android.compileSdkVersion}/android.jar",
+                classpathJars: variant.javaCompile.classpath.getAsPath(),
+                logFile: "allatori-log-${variant.name}.xml")
+        rename('allatori.xml', "allatori-${variant.name}.xml")
+    }
+
+    new File("${variant.javaCompile.destinationDir}-obfuscated").deleteDir()
+
+    //    Kotlin support
+    new File("${buildDir}/tmp/kotlin-classes/${variant.name}-obfuscated").deleteDir()
+
+    javaexec {
+        main = 'com.allatori.Obfuscate'
+        classpath = files("$rootDir/allatori/allatori.jar")
+        args "$buildDir/intermediates/classes/allatori-${variant.name}.xml"
+    }
+
+    new File("${variant.javaCompile.destinationDir}").deleteDir()
+    new File("${variant.javaCompile.destinationDir}-obfuscated").renameTo(new File("${variant.javaCompile.destinationDir}"))
+
+    // Kotlin support
+    new File("${buildDir}/tmp/kotlin-classes/${variant.name}").deleteDir()
+    new File("${buildDir}/tmp/kotlin-classes/${variant.name}-obfuscated").renameTo(new File("${buildDir}/tmp/kotlin-classes/${variant.name}"))
+}
+
+dependencies {
+    api fileTree(dir: "libs", include: ["*.jar"])
+    api 'androidx.appcompat:appcompat:1.4.2'
+    api 'com.google.android.material:material:1.6.1'
+    api 'androidx.constraintlayout:constraintlayout:2.1.4'
+    api 'androidx.legacy:legacy-support-v4:1.0.0'
+
+
+    //MultiDex
+    api 'androidx.multidex:multidex:2.0.1'
+
+    //Api Call
+    api 'com.squareup.retrofit2:retrofit:2.9.0'
+    api 'com.squareup.retrofit2:converter-gson:2.9.0'
+    api 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.7'
+
+    //Firebase
+    implementation platform('com.google.firebase:firebase-bom:30.0.2')
+    api 'com.google.firebase:firebase-messaging'
+    api 'com.google.firebase:firebase-analytics'
+    api 'com.google.firebase:firebase-config:21.1.0'
+    api 'com.google.firebase:firebase-auth:21.0.5'
+    api 'com.google.firebase:firebase-crashlytics:18.2.11'
+    //   api 'com.google.firebase:firebase-database:20.0.4'
+    api 'com.google.firebase:firebase-storage:20.0.1'
+    api 'com.google.firebase:firebase-storage-ktx:20.0.1'
+
+    // play Core Whats Bulk
+    //noinspection GradleDependency
+    api 'com.google.android.play:core:1.10.2'
+
+    //Advertisement
+    api 'com.google.android.gms:play-services-ads:21.0.0'
+    api "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    api "androidx.lifecycle:lifecycle-runtime:2.4.1"
+    implementation 'androidx.preference:preference:1.2.0'
+    //noinspection LifecycleAnnotationProcessorWithJava8
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:2.4.1"
+    //noinspection GradleDynamicVersion
+    api 'com.google.ads.mediation:facebook:6.11.0.0'
+    api 'com.facebook.android:facebook-android-sdk:14.0.0'
+
+
+    //Image-Loader
+    api 'com.github.bumptech.glide:glide:4.13.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+
+    //Lock-pattern
+    api 'com.takwolf.android:lock9view:0.1.3'
+    api project(':pflockscreen')
+
+    //Lottie & Text Animations
+    api 'com.airbnb.android:lottie:5.0.3'
+    api 'com.github.smarteist:autoimageslider:1.4.0'
+
+
+    //Fancy-Button
+    api 'com.leinardi.android:speed-dial:3.1.1'
+
+    //Intro
+    api 'com.ramotion.paperonboarding:paper-onboarding:1.1.3'
+
+
+    // Fake Status Lib
+    api 'com.github.3llomi:CircularStatusView:V1.0.2'
+    api 'com.github.shts:StoriesProgressView:3.0.0'
+
+    //Image-Profile Picker
+    api "com.karumi:dexter:6.2.3"
+    api 'com.github.yalantis:ucrop:2.2.6'
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+
+    //Color Picker
+    api 'com.github.QuadFlask:colorpicker:0.0.15'
+
+    //Login-Register
+    api 'com.google.android.gms:play-services-auth:20.2.0'
+
+    //Emoji
+    api 'com.github.hani-momanii:SuperNova-Emoji:1.1'
+
+    //Round Image
+    api 'com.makeramen:roundedimageview:2.3.0'
+    api 'de.hdodenhof:circleimageview:3.1.0'
+
+    //hawk key
+    api 'com.orhanobut:hawk:2.0.1'
+
+    // Image Loader
+    api 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    api 'com.sangcomz:FishBun:1.0.0-alpha05'
+
+    api 'com.alexvasilkov:gesture-views:2.7.1'
+
+    //Country-Code Picker
+    api project(':countrypicker')
+
+
+    //Bubble chat
+    api 'com.github.flipkart-incubator:circular-image:1.0'
+    api 'com.facebook.rebound:rebound:0.3.8'
+
+    // Gif
+    api 'pl.droidsonroids.gif:android-gif-drawable:1.2.23'
+
+    // Login Animator Screen
+    api 'com.github.florent37:viewanimator:1.1.0'
+    api 'com.yanzhikai:TextPathView:0.2.1'
+
+    //otp
+    api 'com.github.mukeshsolanki:android-otpview-pinview:2.0.1'
+
+    // Room Database
+    implementation "androidx.room:room-rxjava2:2.4.2"
+    annotationProcessor "androidx.room:room-compiler:2.4.2"
+
+    //Application Language
+    api "com.github.YarikSOffice:lingver:1.3.0"
+
+    //Billing
+    //noinspection GradleDependency
+    api "com.android.billingclient:billing:4.1.0"
+
+    // Export Contact
+    api 'javax.servlet:javax.servlet-api:4.0.1'
+    api 'com.itextpdf.tool:xmlworker:5.4.2'
+    api 'commons-fileupload:commons-fileupload:1.4'
+    api 'com.googlecode.ez-vcard:ez-vcard:0.11.3'
+
+    //size
+    api 'com.intuit.sdp:sdp-android:1.0.6'
+    api 'com.intuit.ssp:ssp-android:1.0.6'
+
+    api 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    api 'org.apache.commons:commons-io:1.3.2'
+
+    api 'com.simplecityapps:recyclerview-fastscroll:2.0.1'
+    api 'com.elconfidencial.bubbleshowcase:bubbleshowcase:1.3.1'
+    api 'com.github.thekhaeng:pushdown-anim-click:1.1.1'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}

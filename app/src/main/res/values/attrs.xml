@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="OtpView">
+        <attr name="OtpItemCount" format="integer" />
+        <attr name="OtpItemWidth" format="dimension" />
+        <attr name="OtpItemHeight" format="dimension" />
+        <attr name="OtpItemRadius" format="dimension" />
+        <attr name="OtpItemSpacing" format="dimension" />
+        <attr name="OtpLineWidth" format="dimension" />
+        <attr name="OtpLineColor" format="reference|color" />
+        <attr name="OtpViewType" format="enum">
+            <enum name="rectangle" value="0" />
+            <enum name="line" value="1" />
+            <enum name="none" value="2" />
+        </attr>
+        <attr name="android:cursorVisible" />
+        <attr name="android:textAllCaps" />
+        <attr name="OtpCursorWidth" format="dimension" />
+        <attr name="OtpCursorColor" format="reference|color" />
+        <attr name="android:itemBackground" />
+        <attr name="OtpHideLineWhenFilled" format="boolean" />
+        <attr name="OtpState_filled" format="boolean" />
+        <attr name="OtpRtlTextDirection" format="boolean" />
+        <attr name="OtpMaskingChar" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="SearchAnimationToolbar">
+        <attr name="title" format="string" />
+        <attr name="titleTextColor" format="color" />
+        <attr name="subtitle" format="string" />
+        <attr name="subtitleTextColor" format="color" />
+        <attr name="searchHint" format="string" />
+        <attr name="searchBackgroundColor" format="color" />
+    </declare-styleable>
+
+
+</resources>

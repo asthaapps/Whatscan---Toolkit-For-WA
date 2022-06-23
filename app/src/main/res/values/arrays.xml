@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="font_array">
+        <item>font_1.ttf</item>
+        <item>font_2.ttf</item>
+        <item>font_3.ttf</item>
+        <item>font_4.ttf</item>
+        <item>font_5.ttf</item>
+        <item>font_6.ttf</item>
+        <item>font_7.ttf</item>
+        <item>font_8.ttf</item>
+        <item>font_9.ttf</item>
+        <item>font_10.ttf</item>
+    </string-array>
+
+    <array name="possible_conversions">
+        <item>CSV</item>
+        <item>HTML</item>
+        <item>PDF</item>
+        <item>VCF</item>
+        <item>JSON</item>
+        <item>XML</item>
+        <item>TXT</item>
+    </array>
+
+    <array name="colors">
+        <item>@color/Orange</item>
+        <item>@color/LightSalmon</item>
+        <item>@color/DarkOrange</item>
+        <item>@color/Coral</item>
+        <item>@color/HotPink</item>
+        <item>@color/Tomato</item>
+        <item>@color/OrangeRed</item>
+        <item>@color/DeepPink</item>
+        <item>@color/Fuchsia</item>
+        <item>@color/Magenta</item>
+        <item>@color/Red</item>
+        <item>@color/Crimson</item>
+        <item>@color/PaleVioletRed</item>
+        <item>@color/Goldenrod</item>
+        <item>@color/Orchid</item>
+        <item>@color/Chocolate</item>
+        <item>@color/Peru</item>
+        <item>@color/IndianRed</item>
+        <item>@color/MediumVioletRed</item>
+        <item>@color/Silver</item>
+        <item>@color/DarkKhaki</item>
+        <item>@color/RosyBrown</item>
+        <item>@color/MediumOrchid</item>
+        <item>@color/SeaGreen</item>
+        <item>@color/ForestGreen</item>
+        <item>@color/LightSeaGreen</item>
+        <item>@color/DodgerBlue</item>
+        <item>@color/MidnightBlue</item>
+        <item>@color/Aqua</item>
+        <item>@color/Cyan</item>
+        <item>@color/SpringGreen</item>
+        <item>@color/Lime</item>
+        <item>@color/MediumSpringGreen</item>
+        <item>@color/DarkTurquoise</item>
+        <item>@color/DeepSkyBlue</item>
+        <item>@color/DarkCyan</item>
+        <item>@color/Teal</item>
+        <item>@color/Green</item>
+        <item>@color/DarkGreen</item>
+        <item>@color/Blue</item>
+        <item>@color/MediumBlue</item>
+        <item>@color/DarkBlue</item>
+        <item>@color/Navy</item>
+        <item>@color/Black</item>
+    </array>
+</resources>

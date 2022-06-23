@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <include layout="@layout/status_layout" />
+
+            <RelativeLayout
+                android:id="@+id/chat_row_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:src="@drawable/user_photo" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignEnd="@+id/profile_image"
+                    android:layout_alignBottom="@+id/profile_image"
+                    android:layout_marginEnd="-10dp"
+                    android:src="@drawable/ic_fack_add" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_toEndOf="@+id/profile_image"
+                    android:fontFamily="@font/medium"
+                    android:maxLines="1"
+                    android:text="@string/my_status"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvName"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_toEndOf="@+id/profile_image"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/tap_to_add_status_update" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/adColor"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/txt_recent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:text="@string/recent_updates"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvohterStatus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/miniFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mainFab"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/app_float_desc"
+        android:src="@drawable/ic_fack_edit"
+        app:backgroundTint="#313c41"
+        app:borderWidth="0dp"
+        app:elevation="2dp"
+        app:fabCustomSize="48dp"
+        app:tint="@null" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/mainFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/app_float_desc"
+        android:src="@drawable/ic_fack_camera"
+        app:backgroundTint="#00b09c"
+        app:borderWidth="0dp"
+        app:elevation="2dp"
+        app:fabSize="normal"
+        app:tint="@null" />
+</RelativeLayout>

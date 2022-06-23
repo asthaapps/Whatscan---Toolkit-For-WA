@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/rl_premium"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_bottom"
+        android:layout_marginBottom="-70dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/la_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_back_arrow" />
+
+            <ImageView
+                android:id="@+id/icon_vector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/la_back"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/p_vector"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/icon_vector"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Upgrade to Whatscan Master"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorBlack"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/text_sub_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/text_title"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:text="Here is a what do you want it."
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/icon_ads_req"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_sub_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="15sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15sp"
+                android:elevation="2dp"
+
+                tools:ignore="ContentDescription" />
+
+            <RelativeLayout
+                android:id="@+id/icon_bulk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icon_ads_req"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="15sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15sp"
+
+                tools:ignore="ContentDescription">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:background="@drawable/plan_bulk_border"
+                    android:padding="9dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_price1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/no_price_bulk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="5dp"
+                            android:background="@drawable/strike_text"
+                            android:fontFamily="@font/medium"
+                            android:text="$29.99 / Yearly"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="#F578EA"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/price_bulk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="5dp"
+                            android:layout_toEndOf="@+id/no_price_bulk"
+                            android:fontFamily="@font/medium"
+                            android:text="$24.99 / Yearly"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="16.3sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/bulk_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/rl_price1"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/regular"
+                        android:text="After 1 year regular price applies, Offer valid only for the first purchase"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="#73000000"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/icon_classic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icon_bulk"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="15sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15sp"
+                android:background="@drawable/g_classic"
+                tools:ignore="ContentDescription">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:background="@drawable/plan_classic_border"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_price2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/no_price_classic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="5dp"
+                            android:background="@drawable/strike_text"
+                            android:fontFamily="@font/medium"
+                            android:text="$29.99 / Yearly"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="#AE8C43"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/price_classic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="5dp"
+                            android:layout_toEndOf="@+id/no_price_classic"
+                            android:fontFamily="@font/medium"
+                            android:text="$24.99 / Yearly"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="16.3sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/classic_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/rl_price2"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/regular"
+                        android:text="After 1 year regular price applies, Offer valid only for the first purchase"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/icon_premium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icon_classic"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="15sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15sp"
+
+                tools:ignore="ContentDescription">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:background="@drawable/plan_premium_border"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/no_price_premium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="5dp"
+                            android:background="@drawable/strike_text"
+                            android:fontFamily="@font/medium"
+                            android:text="$29.99 / Yearly"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="#4C93D5"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/price_premium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="5dp"
+                            android:layout_toEndOf="@+id/no_price_premium"
+                            android:fontFamily="@font/medium"
+                            android:text="$24.99 / Yearly"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="16.3sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/premium_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/rl_price"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/regular"
+                        android:text="After 1 year regular price applies, Offer valid only for the first purchase"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/rl_bottom"
+        layout="@layout/premium_bottom" />
+
+</RelativeLayout>

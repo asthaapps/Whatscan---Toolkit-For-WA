@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/singleMessageParent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/originalMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/bubbleBG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:padding="12.0dip">
+
+            <TextView
+                android:id="@+id/previewName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jason"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="12.0sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/singleMessage"
+                android:layout_width="215.0dip"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/previewName"
+                android:layout_marginTop="4.0dip"
+                android:maxLines="10"
+                android:text="Hello! What's Up?                "
+                android:textColor="#ff4c4b4b"
+                android:textDirection="ltr" />
+
+            <TextView
+                android:id="@+id/timeStamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/previewName"
+                android:layout_alignEnd="@+id/singleMessage"
+                android:layout_alignBottom="@+id/singleMessage"
+                android:alpha="0.55"
+                android:gravity="end"
+                android:text="12:53 PM"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="10.0sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

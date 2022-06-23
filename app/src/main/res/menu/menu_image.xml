@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/delete"
+        android:icon="@drawable/ic_w_delete"
+        android:title="@string/delete" />
+    <item
+        android:id="@+id/share"
+        android:icon="@drawable/se_share"
+        android:title="@string/share" />
+    <item
+        android:id="@+id/re_post"
+        android:icon="@drawable/ic_w_repost"
+        android:title="@string/repost" />
+    <item
+        android:id="@+id/setAsWallpaper"
+        android:icon="@drawable/ic_w_wallpater"
+        android:title="@string/set_as_wallpaper" />
+    <item
+        android:id="@+id/save"
+        android:icon="@drawable/ic_w_download"
+        android:title="@string/download" />
+</menu>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlVEmail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context=".User.ActivityVerifyEmail">
+
+    <ImageView
+        android:id="@+id/iv_welcome"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20sp"
+        android:padding="10dp"
+        android:src="@drawable/header_logo"
+        tools:ignore="ContentDescription" />
+
+    <RelativeLayout
+        android:id="@+id/rl_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_welcome"
+        android:layout_marginTop="20sp"
+        android:padding="15sp">
+
+        <TextView
+            android:id="@+id/tv_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/regular"
+            android:paddingStart="15sp"
+            android:paddingTop="5dp"
+            android:paddingEnd="15sp"
+            android:paddingBottom="5dp"
+            android:text="@string/the_verification_code"
+            android:textColor="@color/Red"
+            android:textSize="11sp"
+            android:visibility="gone"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/tv_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_error"
+            android:fontFamily="@font/bold"
+            android:paddingStart="15sp"
+            android:paddingEnd="15sp"
+            android:text="@string/we_sent_a_code_to_your_email"
+            android:textColor="@color/colorBlack"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/tv_dec2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title2"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/medium"
+            android:paddingStart="15sp"
+            android:paddingEnd="5dp"
+            android:text="@string/enter_6_digit_verification_code"
+            android:textColor="@color/colorGrey"
+            android:textSize="11sp"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_dec2"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/medium"
+            android:paddingStart="15sp"
+            android:paddingEnd="5dp"
+            android:text=""
+            android:textColor="@color/colorBlack"
+            android:textSize="11sp"
+            tools:ignore="SmallSp" />
+
+        <com.mukesh.OtpView
+            android:id="@+id/otpView"
+            style="@style/OtpWidget.OtpView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_email"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20sp"
+            android:cursorVisible="true"
+            android:focusable="true"
+            android:inputType="number"
+            android:visibility="visible"
+            app:itemCount="6"
+            app:lineColor="@color/colorTools"
+            app:viewType="rectangle" />
+
+        <TextView
+            android:id="@+id/tv_resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/otpView"
+            android:layout_marginTop="7dp"
+            android:layout_toStartOf="@+id/tv_timer"
+            android:fontFamily="@font/medium"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/resend_code"
+            android:textColor="@color/colorTools"
+            android:textSize="13sp"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/tv_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/otpView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="2dp"
+            android:fontFamily="@font/medium"
+            android:padding="5dp"
+            android:text=""
+            android:textColor="@color/colorGrey"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_resend"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="25sp"
+            android:backgroundTint="@color/colorTools"
+            android:fontFamily="@font/bold"
+            android:padding="3dp"
+            android:paddingStart="15sp"
+            android:paddingEnd="15sp"
+            android:text="@string/submit"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_dec3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_submit"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/medium"
+            android:padding="10dp"
+            android:text="@string/if_you_don_t_see_the_email"
+            android:textColor="@color/colorGrey"
+            android:textSize="11sp"
+            tools:ignore="SmallSp" />
+    </RelativeLayout>
+</RelativeLayout>

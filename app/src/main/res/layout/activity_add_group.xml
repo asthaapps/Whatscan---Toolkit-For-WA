@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlGroup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/ic_include"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        android:background="@color/colorWhite"-->
+<!--        android:elevation="2dp"-->
+<!--        android:gravity="center">-->
+
+<!--        <com.airbnb.lottie.LottieAnimationView-->
+<!--            android:id="@+id/la_back"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            app:lottie_autoPlay="true"-->
+<!--            app:lottie_loop="true"-->
+<!--            app:lottie_rawRes="@raw/back" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_toEndOf="@+id/la_back"-->
+<!--            android:fontFamily="@font/bold"-->
+<!--            android:gravity="center"-->
+<!--            android:text="@string/app_name"-->
+<!--            android:textColor="@color/colorAccent"-->
+<!--            android:textSize="18sp" />-->
+<!--    </RelativeLayout>-->
+    <include
+        android:id="@+id/ic_include"
+        layout="@layout/content_toolbar_info" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleAddGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_banner"
+        android:layout_below="@+id/ic_include"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <LinearLayout
+        android:id="@+id/llInstruction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_banner"
+        android:layout_below="@+id/ic_include"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/la_empty"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/empty" />
+
+        <TextView
+            android:id="@+id/txtNoGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_groups_yet_created"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/txtNoGroupSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/tap_add_button_create_group"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txtCSVFileDownlod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_border"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingTop="@dimen/margin_8"
+            android:paddingRight="20dp"
+            android:paddingBottom="@dimen/margin_8"
+            android:text="@string/download_sample_csv"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            app:drawableStartCompat="@drawable/ic_w_download" />
+
+        <ImageView
+            android:id="@+id/imgSample"
+            android:layout_width="250dp"
+            android:layout_height="125dp"
+            android:layout_margin="10dp"
+            android:contentDescription="@string/app_image_desc"
+            android:src="@drawable/sample"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAddGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_banner"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/app_float_desc"
+        android:rotation="180"
+        android:src="@drawable/ic_add_white"
+        app:backgroundTint="@color/colorTools"
+        app:borderWidth="0dp"
+        app:elevation="2dp"
+        app:tint="@null" />
+
+    <LinearLayout
+        android:id="@+id/ll_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" />
+</RelativeLayout>

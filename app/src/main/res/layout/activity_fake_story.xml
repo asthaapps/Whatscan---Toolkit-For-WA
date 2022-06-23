@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlFackStory"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <include
+        android:id="@+id/ic_include"
+        layout="@layout/content_toolbar_info" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/la_fake_story"
+        android:layout_width="140dp"
+        android:layout_height="90dp"
+        android:layout_below="@+id/ic_include"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="3dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/fake_story_dark" />
+
+    <TextView
+        android:id="@+id/tv_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ic_include"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="3dp"
+        android:layout_toStartOf="@+id/la_fake_story"
+        android:fontFamily="@font/bold"
+        android:gravity="center"
+        android:padding="20sp"
+        android:text="@string/prank_your_friend_with_fake_story"
+        android:textSize="18sp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_banner"
+        android:layout_below="@+id/la_fake_story"
+        android:layout_marginTop="10dp"
+        android:overScrollMode="never">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mtf_name"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10.0dp"
+                app:boxStrokeColor="@color/colorTools">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/first_name"
+                    android:inputType="textAutoComplete"
+                    android:lines="1"
+                    android:paddingStart="10.0dp"
+                    android:paddingEnd="10.0dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mtf_last_seen"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/mtf_name"
+                android:layout_margin="10.0dp"
+                app:boxStrokeColor="@color/colorTools">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_last_seen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/last_seen"
+                    android:inputType="textAutoComplete"
+                    android:lines="1"
+                    android:paddingStart="10.0dp"
+                    android:paddingEnd="10.0dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/la_seen_info"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_above="@+id/mtf_last_seen"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="13dp"
+                android:layout_marginBottom="-50dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/info" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/la_seen_info"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="40dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:id="@+id/tv_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/regular"
+                    android:padding="10dp"
+                    android:text="@string/seen_format"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mtf_caption"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/mtf_last_seen"
+                android:layout_margin="10.0dp"
+                app:boxStrokeColor="@color/colorTools">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/caption"
+                    android:inputType="textAutoComplete"
+                    android:lines="1"
+                    android:paddingStart="10.0dp"
+                    android:paddingEnd="10.0dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_select_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mtf_caption"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/button_light"
+                android:elevation="10dp"
+                android:fontFamily="@font/bold"
+                android:minHeight="0dp"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:text="@string/select_profile"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/cv_profile"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_below="@+id/mtf_caption"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="26dp"
+                android:src="@drawable/ic_profile" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_select_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cv_profile"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/button_light"
+                android:elevation="10dp"
+                android:fontFamily="@font/bold"
+                android:minHeight="0dp"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:text="@string/select_image"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/thumb_card_view"
+                android:layout_width="90dp"
+                android:layout_height="110dp"
+                android:layout_below="@+id/cv_profile"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="20sp"
+                android:elevation="3dp"
+                app:cardCornerRadius="8dp"
+                app:cardUseCompatPadding="true">
+
+                <ImageView
+                    android:id="@+id/iv_thumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/app_image_desc"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_select_image" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_watch_story"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/thumb_card_view"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="41dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/button_light"
+                android:elevation="5dp"
+                android:fontFamily="@font/bold"
+                android:minHeight="0dp"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:text="@string/watch_story"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/dialog_white"
+        android:elevation="10dp"
+        android:visibility="gone">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/la_magic"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_above="@+id/tv_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/magic" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_tip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="@string/wait_magic_is_happening_for_pranking_a_friend"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/regular"
+            android:gravity="center"
+            android:text="@string/tip_make_a_fake_story_take_screenshot_and_prank_your_frineds" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" />
+</RelativeLayout>

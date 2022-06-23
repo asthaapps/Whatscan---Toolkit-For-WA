@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_general"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp"
+        android:text="@string/general"
+        android:textColor="@color/Black"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/llGeneral"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_general"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/shape_white"
+        android:elevation="0.3dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlProfile"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <ImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="5dp"
+                android:src="@drawable/d_profile" />
+
+            <TextView
+                android:id="@+id/tv_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/img1"
+                android:layout_toEndOf="@id/iv_profile"
+                android:fontFamily="@font/medium"
+                android:paddingStart="10dp"
+                android:paddingEnd="5dp"
+                android:text="@string/profile"
+                android:textColor="@color/colorBlack"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/setting_next_bg"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="3dp"
+                android:src="@drawable/ic_baseline_navigate_next_24_black" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlPrePlan"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <ImageView
+                android:id="@+id/iv_premium"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:src="@drawable/d_premium" />
+
+            <TextView
+                android:id="@+id/tv_premium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/img2"
+                android:layout_toEndOf="@id/iv_premium"
+                android:fontFamily="@font/medium"
+                android:paddingStart="10dp"
+                android:paddingEnd="5dp"
+                android:text="@string/premium"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp" />
+
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/setting_next_bg"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="3dp"
+                android:src="@drawable/ic_baseline_navigate_next_24_black" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_notification"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/iv_noti"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:src="@drawable/d_noti" />
+
+            <TextView
+                android:id="@+id/tv_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/notification_switch"
+                android:layout_toEndOf="@+id/iv_noti"
+                android:fontFamily="@font/medium"
+                android:paddingStart="10dp"
+                android:paddingEnd="5dp"
+                android:text="@string/notification"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/notification_switch"
+                android:layout_width="50dp"
+                android:layout_height="36dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="18dp"
+                android:checked="true"
+                android:thumb="@drawable/switch_thumb"
+                app:track="@drawable/switch_xml" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlDarkTheme"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <ImageView
+                android:id="@+id/iv_dark"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="5dp"
+                android:src="@drawable/them2" />
+
+            <TextView
+                android:id="@+id/tv_darkMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/globalDark"
+                android:layout_toEndOf="@id/iv_dark"
+                android:fontFamily="@font/medium"
+                android:paddingStart="10dp"
+                android:paddingEnd="5dp"
+                android:text="@string/dark_mode"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/globalDark"
+                android:layout_width="50dp"
+                android:layout_height="36dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="18dp"
+                android:fontFamily="@font/medium"
+                android:text=""
+                android:textColor="@color/white"
+                android:thumb="@drawable/switch_thumb"
+                android:visibility="visible"
+                app:track="@drawable/switch_xml" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <ImageView
+                android:id="@+id/iv_language"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="5dp"
+                android:src="@drawable/d_lang2" />
+
+            <TextView
+                android:id="@+id/tv_language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/img5"
+                android:layout_toEndOf="@id/iv_language"
+                android:fontFamily="@font/medium"
+                android:paddingStart="10dp"
+                android:paddingEnd="5dp"
+                android:text="@string/select_language"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/setting_next_bg"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="3dp"
+                android:src="@drawable/ic_baseline_navigate_next_24_black" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlReward"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <ImageView
+                android:id="@+id/iv_Reward"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:src="@drawable/d_reward" />
+
+            <TextView
+                android:id="@+id/tv_Reward"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/img15"
+                android:layout_toEndOf="@id/iv_Reward"
+                android:fontFamily="@font/medium"
+                android:paddingStart="10dp"
+                android:paddingEnd="5dp"
+                android:text="@string/reward_points_amp_vouchers"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/img15"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/setting_next_bg"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="3dp"
+                android:src="@drawable/ic_baseline_navigate_next_24_black" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlPermission"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/iv_permission"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="2dp"
+                android:src="@drawable/d_permission" />
+
+            <TextView
+                android:id="@+id/tv_permission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/img14"
+                android:layout_toEndOf="@id/iv_permission"
+                android:fontFamily="@font/medium"
+                android:paddingStart="10dp"
+                android:paddingEnd="5dp"
+                android:text="@string/permission"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/img14"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/setting_next_bg"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="3dp"
+                android:src="@drawable/ic_baseline_navigate_next_24_black" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

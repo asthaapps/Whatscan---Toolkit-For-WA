@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llFolder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/medium"
+        android:padding="15dp"
+        android:text="@string/get_whatsapp_status"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:paddingStart="15dp"
+        android:paddingTop="1dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="1dp"
+        android:text="@string/_1_click_on_use_this_folder_n2_click_on_allow"
+        android:textColor="@color/colorBlack"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_gravity="center"
+        android:src="@drawable/folder_select"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/txtGet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_light"
+        android:fontFamily="@font/medium"
+        android:paddingStart="25dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="25dp"
+        android:paddingBottom="8dp"
+        android:text="@string/get_it"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+</LinearLayout>

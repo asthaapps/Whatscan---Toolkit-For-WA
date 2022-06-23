@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:padding="3dp">
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/la_dialog_anim"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/magic" />
+
+        <TextView
+            android:id="@+id/tv_dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/medium"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/fake_story_wp"
+            android:textColor="@color/colorTools"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_dialog_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/fake_story_info_text"
+        android:textColor="@color/colorBlack"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_dialog_tip"
+        android:layout_margin="10dp"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_Wp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/button_light"
+            android:drawableStart="@drawable/icon_wp"
+            android:drawablePadding="8dp"
+            android:elevation="5dp"
+            android:fontFamily="@font/medium"
+            android:minHeight="0dp"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="10dp"
+            android:text="@string/whatsapp"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            tools:ignore="ButtonStyle" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_WpB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/button_light"
+            android:drawableStart="@drawable/icon_business"
+            android:drawablePadding="8dp"
+            android:elevation="5dp"
+            android:fontFamily="@font/medium"
+            android:minHeight="0dp"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="10dp"
+            android:text="@string/business"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+</RelativeLayout>

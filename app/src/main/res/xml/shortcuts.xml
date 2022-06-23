@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/logo">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.whatscan.toolkit.forwa.DirectChat.ActivityDirectChat"
+            android:targetPackage="com.whatscan.toolkit.forwa" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/logo">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.whatscan.toolkit.forwa.Story.ActivityStorySaver"
+            android:targetPackage="com.whatscan.toolkit.forwa" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/logo">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.whatscan.toolkit.forwa.BulkMsg.ActivityBulkMessage"
+            android:targetPackage="com.whatscan.toolkit.forwa" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/logo">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.whatscan.toolkit.forwa.AutoResponse.ActivityAutoResponse"
+            android:targetPackage="com.whatscan.toolkit.forwa" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+</shortcuts>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlDelay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/top_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium"
+                android:padding="15dp"
+                android:text="Set time delay"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mtf_UserName"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="15dp"
+                android:layout_toStartOf="@+id/second_minute_spinner"
+                app:boxStrokeColor="@color/colorTools">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editreply_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:autofillHints="@string/first_name"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:maxLines="1"
+                    android:paddingStart="10.0dp"
+                    android:paddingEnd="10.0dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/second_minute_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#ff000000"
+                android:gravity="end"
+                android:textAlignment="textEnd" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:fontFamily="@font/regular"
+            android:text="Note : Max 600 seconds (10 minutes) allow for delay"
+            android:textColor="@color/colorBlack"
+            android:textSize="13sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/updatebtn"
+            android:layout_width="140dp"
+            android:layout_height="35dp"
+            android:layout_gravity="end"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_light"
+            android:fontFamily="@font/medium"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</RelativeLayout>

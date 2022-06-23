@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlInviteFrd"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:padding="15dp"
+        android:text="Invite &amp; Earn!"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp"
+        android:text="Invalid invitation code, Please Re-enter Code!"
+        android:textColor="@color/Red"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txtCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_error"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/bold"
+        android:letterSpacing="0.1"
+        android:text="Code"
+        android:textColor="@color/colorAccent"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/txtCopy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCode"
+        android:layout_centerHorizontal="true"
+        android:text="Tap to copy"
+        android:textColor="@color/Red" />
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtCopy"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="Share this invitation code with your friends and family and earn 50 Coins per referral."
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvInviteInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvInfo"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/medium"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp"
+        android:text="3 times per day At most.(3/3 left)"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnInviteNow"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tvInviteInfo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_light"
+        android:fontFamily="@font/medium"
+        android:text="Invite"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</RelativeLayout>

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardOne"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtNoAds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:text="Whatscan No-Ads Pack"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtNoAds"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        android:id="@+id/text_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.36"
+                        android:fontFamily="@font/medium"
+                        android:gravity="center"
+                        android:text="@string/benefits"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorBlack" />
+
+                    <TextView
+                        android:id="@+id/text_title2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:fontFamily="@font/medium"
+                        android:gravity="center"
+                        android:text="@string/free_user"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorBlack" />
+
+                    <TextView
+                        android:id="@+id/text_title3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.4"
+                        android:fontFamily="@font/medium"
+                        android:gravity="center"
+                        android:text="@string/paid_user"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorBlack" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/icon"
+                        android:layout_width="46dp"
+                        android:layout_height="46dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="0"
+                        android:src="@drawable/d_no_ads"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/txt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/ad_free_nexperience"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/icon2"
+                        android:layout_width="46dp"
+                        android:layout_height="46dp"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_baseline_cancel_24"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/icon3"
+                        android:layout_width="46dp"
+                        android:layout_height="46dp"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_round_check_circle_24"
+                        tools:ignore="ContentDescription" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/ll_third"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardTwo"
+            android:layout_marginTop="5dp"
+            android:baselineAligned="false"
+            android:orientation="vertical"
+            android:paddingBottom="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/btnAdsM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtAdsMA"
+                    android:background="@drawable/selector_item_purchase"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <RadioButton
+                        android:id="@+id/AdMonth"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:backgroundTint="@color/colorTools"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:id="@+id/txtMon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/AdMonth"
+                        android:fontFamily="@font/bold"
+                        android:gravity="start"
+                        android:maxLines="1"
+                        android:paddingStart="20dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="0dp"
+                        android:paddingBottom="2dp"
+                        android:text="@string/monthly"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtPriceM"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtMon"
+                        android:layout_toEndOf="@+id/AdMonth"
+                        android:fontFamily="@font/regular"
+                        android:maxLines="2"
+                        android:paddingStart="20dp"
+                        android:paddingTop="3dp"
+                        android:paddingEnd="0dp"
+                        android:paddingBottom="5dp"
+                        android:text="@string/billed_weekly"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtAdsMA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="-10dp"
+                    android:background="@drawable/button_light"
+                    android:fontFamily="@font/medium"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="@string/plan_active"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="11sp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/btnAdsY"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtAdsYA"
+                    android:background="@drawable/selector_item_purchase"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <RadioButton
+                        android:id="@+id/AdYear"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:backgroundTint="@color/colorTools"
+                        android:checked="true"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:id="@+id/txtYar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toEndOf="@+id/AdYear"
+                        android:fontFamily="@font/bold"
+                        android:gravity="start"
+                        android:maxLines="1"
+                        android:paddingStart="20dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="0dp"
+                        android:paddingBottom="2dp"
+                        android:scrollbars="vertical"
+                        android:text="@string/yearly"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtPriceY"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtYar"
+                        android:layout_toEndOf="@+id/AdYear"
+                        android:fontFamily="@font/regular"
+                        android:maxLines="2"
+                        android:paddingStart="20dp"
+                        android:paddingTop="3dp"
+                        android:paddingEnd="0dp"
+                        android:paddingBottom="5dp"
+                        android:text="@string/billed_yearly"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtAdsYA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="-10dp"
+                    android:background="@drawable/button_light"
+                    android:fontFamily="@font/medium"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="@string/plan_active"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="11sp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPayRemove"
+            android:layout_width="180dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/ll_third"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_light"
+            android:fontFamily="@font/medium"
+            android:maxLines="1"
+            android:text="@string/subscribe_now"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

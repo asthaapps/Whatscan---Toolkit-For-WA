@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlSave"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:padding="3dp">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="60.0dip"
+        android:layout_height="60.0dip"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/app_image_desc"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/imageView2"
+        android:fontFamily="@font/medium"
+        android:paddingStart="10dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="5dp"
+        android:text="@string/cp_save"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading"
+        android:layout_toEndOf="@+id/imageView2"
+        android:paddingStart="10dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="5dp"
+        android:text="@string/select_quality_save" />
+
+    <TextView
+        android:id="@+id/medium"
+        android:layout_width="120.0dip"
+        android:layout_height="35.0dip"
+        android:layout_below="@+id/imageView2"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_light"
+        android:fontFamily="@font/medium"
+        android:gravity="center"
+        android:text="@string/medium"
+        android:textColor="@color/colorWhite" />
+
+    <TextView
+        android:id="@+id/hd"
+        android:layout_width="120.0dip"
+        android:layout_height="35.0dip"
+        android:layout_below="@+id/imageView2"
+        android:layout_margin="10dp"
+        android:layout_toStartOf="@+id/medium"
+        android:background="@drawable/button_light"
+        android:fontFamily="@font/medium"
+        android:gravity="center"
+        android:text="@string/hd"
+        android:textColor="@color/colorWhite" />
+</RelativeLayout>

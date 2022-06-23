@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llMainSnack"
+    android:background="@color/bg_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ic_include"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="2dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/la_back"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/tv_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_toEndOf="@+id/la_back"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:text="@string/bulk_sending_status"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/timeSentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:lineSpacingExtra="4sp"
+            android:lines="1"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/messageInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/medium"
+                    android:text="@string/message"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/fileInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/medium"
+                    android:text="@string/file_attachment"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtAttachment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="10dp"
+                    android:text="@string/view_attached_files"
+                    android:textAllCaps="true"
+                    android:textSize="12sp"
+                    app:drawableRightCompat="@drawable/ic_open_in_new_24px_rounded" />
+
+                <TextView
+                    android:id="@+id/txtContactCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/medium"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtViewContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="10dp"
+                    android:text="@string/view_all_contacts"
+                    android:textAllCaps="true"
+                    android:textSize="12sp"
+                    app:drawableRightCompat="@drawable/ic_open_in_new_24px_rounded" />
+
+                <TextView
+                    android:id="@+id/txtModeInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/medium"
+                    android:text="@string/sending_mode"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#90cccccc" />
+
+            <LinearLayout
+                android:id="@+id/progressLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/progressInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/medium"
+                    android:text="@string/bulk_sending_status"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rlFirst"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@color/colorWhite"
+                    android:elevation="2dp"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/addDelayInSending"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/medium"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="@string/add_delay_second"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:id="@+id/delayControlLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/addDelayInSending"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnMinus"
+                            android:layout_width="50dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/button_light"
+                            android:text=" - "
+                            android:textColor="@color/colorWhite"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txtSecondCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_16"
+                            android:text="@string/_0_sec"
+                            android:textSize="16sp" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnPlus"
+                            android:layout_width="50dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/button_light"
+                            android:text=" + "
+                            android:textColor="@color/colorWhite"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swAntiBan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/colorWhite"
+                    android:elevation="2dp"
+                    android:fontFamily="@font/medium"
+                    android:padding="10dp"
+                    android:text="@string/enable_anti_ban"
+                    android:textSize="15sp"
+                    android:thumb="@drawable/switch_thumb"
+                    app:track="@drawable/switch_xml" />
+
+                <TextView
+                    android:id="@+id/txtProgressView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="24dp"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/txtDelay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:padding="16dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCancelSend"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/medium"
+                        android:maxLines="1"
+                        android:padding="12dp"
+                        android:text="@string/cancel_sending"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp"
+                        app:backgroundTint="@color/colorTools"
+                        app:cornerRadius="25dp"
+                        app:icon="@drawable/ic_cancel"
+                        app:iconGravity="textStart"
+                        app:iconPadding="10dp"
+                        app:iconSize="18dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnStartSend"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/medium"
+                        android:maxLines="1"
+                        android:padding="12dp"
+                        android:text="@string/start_forward_to_all"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="13sp"
+                        app:backgroundTint="@color/colorTools"
+                        app:cornerRadius="25dp"
+                        app:icon="@drawable/ic_forward_all"
+                        app:iconGravity="textStart"
+                        app:iconPadding="10dp"
+                        app:iconSize="18dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

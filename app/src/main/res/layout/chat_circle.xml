@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="fill_parent"
+        android:layout_height="55.0dip"
+        android:background="@color/colorTools">
+
+        <ImageView
+            android:id="@+id/userimg"
+            android:layout_width="50.0dip"
+            android:layout_height="55.0dip"
+            android:contentDescription="@string/app_image_desc"
+            android:minHeight="50.0dip"
+            android:padding="5.0dip" />
+
+        <TextView
+            android:id="@+id/identifier"
+            android:layout_width="match_parent"
+            android:layout_height="55.0dip"
+            android:layout_marginStart="10.0dip"
+            android:layout_toStartOf="@+id/popup"
+            android:layout_toEndOf="@+id/userimg"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/app_name"
+            android:textColor="#ffffffff"
+            android:textSize="20.0sp" />
+
+        <ImageView
+            android:id="@+id/popup"
+            android:layout_width="50.0dip"
+            android:layout_height="55.0dip"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10.0dip"
+            android:contentDescription="@string/app_image_desc"
+            android:padding="10.0dip"
+            android:src="@drawable/ic_w_share" />
+    </RelativeLayout>
+
+    <com.whatscan.toolkit.forwa.WBubble.util.RelativeCustom
+        android:id="@+id/chatbg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/topbar"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/background_chat_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="55.0dip"
+            android:contentDescription="@string/app_image_desc" />
+
+        <com.whatscan.toolkit.forwa.WBubble.util.CustomListView
+            android:id="@+id/listView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="55.0dip"
+            android:paddingTop="5.0dip"
+            android:paddingBottom="5.0dip" />
+
+        <RelativeLayout
+            android:id="@+id/bottomContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="55.0dip"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bottom_1">
+
+            <ImageView
+                android:id="@+id/sendButton"
+                android:layout_width="50.0dip"
+                android:layout_height="fill_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="5.0dip"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="12.0dip"
+                android:scaleType="fitEnd"
+                android:src="@drawable/ic_w_send_msg" />
+
+            <View
+                android:id="@+id/replyBorder"
+                android:layout_width="wrap_content"
+                android:layout_height="0.0dip" />
+
+            <RelativeLayout
+                android:id="@+id/bottomBox"
+                android:layout_width="wrap_content"
+                android:layout_height="55.0dip"
+                android:layout_marginStart="5.0dip"
+                android:layout_marginEnd="6.0dip"
+                android:layout_toStartOf="@+id/sendButton"
+                android:alpha="1.0"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/sendBox"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="6.0dip"
+                    android:autofillHints="@string/typeMessage"
+                    android:background="@color/colorWhite"
+                    android:focusable="true"
+                    android:hint="@string/typeMessage"
+                    android:imeOptions="actionSend"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:lineSpacingExtra="2.0dip"
+                    android:maxHeight="100.0dip"
+                    android:text=""
+                    android:textColor="#ff000000"
+                    android:textColorHint="#ff8b8a8a"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16.0sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/replyNotice"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/bottomBox"
+                android:layout_marginBottom="0.0dip"
+                android:background="#ffffffff"
+                android:gravity="center"
+                android:padding="5.0dip"
+                android:text="@string/sorry_notice"
+                android:textColor="#ff98170e"
+                android:textSize="12.0sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </com.whatscan.toolkit.forwa.WBubble.util.RelativeCustom>
+</RelativeLayout>

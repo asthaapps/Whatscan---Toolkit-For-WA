@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="colorPrimary">#00D46E</color>-->
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#6DA188</color>
+    <color name="colorTools">#6DA188</color>
+    <color name="fingerprint_success">#009688</color>
+    <color name="fingerprint_error">#F4511E</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="darkBlack">#303030</color>
+    <color name="darkBlack_1">#575656</color>
+    <color name="colorGrey">#37474F</color>
+    <color name="wpText">#00BEA5</color>
+    <color name="colorShape">#424242</color>
+    <color name="dp">#ededed</color>
+    <color name="colorChat">#054c44</color>
+    <color name="colorChatLight">#25D366</color>
+    <color name="overlay_color">#aa000000</color>
+    <color name="grey_500">#9E9E9E</color>
+    <color name="yellow">#FDD835</color>
+    <color name="bg_color">#ffffff</color>
+    <color name="bg_color_1">#F3F3F3</color>
+    <color name="card_color">#f5f5f5</color>
+    <color name="chipback">#ebebeb</color>
+    <color name="adColor">#f6f6f6</color>
+
+    <color name="mtrl_textinput_default_box_stroke_color">#6DA188</color>
+
+
+
+    <color name="border1">#FF6817</color>
+    <color name="border2">#6DA188</color>
+    <color name="border3">#0160BC</color>
+
+
+
+
+    <!-- Color Picker-->
+    <color name="materialcolorpicker__white">#ffffff</color>
+    <color name="materialcolorpicker__red">#f44336</color>
+    <color name="materialcolorpicker__green">#4caf50</color>
+    <color name="materialcolorpicker__blue">#2196f3</color>
+    <color name="materialcolorpicker__grey">#b3b3b3</color>
+    <color name="materialcolorpicker__lightgrey">#d9d9d9</color>
+    <color name="materialcolorpicker__dribble">#ea4c89</color>
+    <color name="materialcolorpicker__dribbledark">#c32361</color>
+    <color name="materialcolorpicker__black">#000000</color>
+    <color name="materialcolorpicker__dialogcolor">#009688</color>
+
+    <!--Array Color-->
+    <color name="Orange">#ffffa500</color>
+    <color name="LightSalmon">#ffffa07a</color>
+    <color name="DarkOrange">#ffff8c00</color>
+    <color name="Coral">#ffff7f50</color>
+    <color name="HotPink">#ffff69b4</color>
+    <color name="Tomato">#ffff6347</color>
+    <color name="OrangeRed">#ffff4500</color>
+    <color name="DeepPink">#ffff1493</color>
+    <color name="Fuchsia">#ffff00ff</color>
+    <color name="Magenta">#ffff00ff</color>
+    <color name="Red">#ffff0000</color>
+    <color name="Crimson">#ffdc143c</color>
+    <color name="PaleVioletRed">#ffdb7093</color>
+    <color name="Goldenrod">#ffdaa520</color>
+    <color name="Orchid">#ffda70d6</color>
+    <color name="Chocolate">#ffd2691e</color>
+    <color name="Peru">#ffcd853f</color>
+    <color name="IndianRed">#ffcd5c5c</color>
+    <color name="MediumVioletRed">#ffc71585</color>
+    <color name="Silver">#ffc0c0c0</color>
+    <color name="DarkKhaki">#ffbdb76b</color>
+    <color name="RosyBrown">#ffbc8f8f</color>
+    <color name="MediumOrchid">#ffba55d3</color>
+    <color name="SeaGreen">#ff2e8b57</color>
+    <color name="ForestGreen">#ff228b22</color>
+    <color name="LightSeaGreen">#ff20b2aa</color>
+    <color name="DodgerBlue">#ff1e90ff</color>
+    <color name="MidnightBlue">#ff191970</color>
+    <color name="Aqua">#ff00ffff</color>
+    <color name="Cyan">#ff00ffff</color>
+    <color name="SpringGreen">#ff00ff7f</color>
+    <color name="Lime">#ff00ff00</color>
+    <color name="MediumSpringGreen">#ff00fa9a</color>
+    <color name="DarkTurquoise">#ff00ced1</color>
+    <color name="DeepSkyBlue">#ff00bfff</color>
+    <color name="DarkCyan">#ff008b8b</color>
+    <color name="Teal">#ff008080</color>
+    <color name="Green">#ff008000</color>
+    <color name="DarkGreen">#ff006400</color>
+    <color name="Blue">#ff0000ff</color>
+    <color name="MediumBlue">#ff0000cd</color>
+    <color name="DarkBlue">#ff00008b</color>
+    <color name="Navy">#ff000080</color>
+    <color name="Black">#ff000000</color>
+</resources>

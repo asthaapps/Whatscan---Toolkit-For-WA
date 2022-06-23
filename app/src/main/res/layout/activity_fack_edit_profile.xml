@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_chat_edit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".Prank.FakeChat.ActivityChatAdd">
+
+    <include
+        android:id="@+id/ic_include"
+        layout="@layout/content_toolbar_info"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ic_include"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="60.0dp"
+                android:layout_margin="10.0dp"
+                app:boxStrokeColor="@color/colorTools">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/fack_chat_name"
+                    android:inputType="textAutoComplete"
+                    android:lines="1"
+                    android:paddingStart="10.0dp"
+                    android:paddingEnd="10.0dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/medium"
+                    android:text="@string/upload_photo"
+                    android:textColor="@color/colorTools"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/user_profilepic"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="10.0dp"
+                        android:src="@drawable/user_photo"
+                        app:civ_border_color="#ff000000"
+                        app:civ_border_width="0dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="2.0">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.3"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/medium"
+                        android:text="@string/online"
+                        android:textColor="@color/colorTools"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.7"
+                    android:gravity="center|end">
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/user_onlile"
+                        android:layout_width="50dp"
+                        android:layout_height="8dp"
+                        android:layout_marginEnd="25dp"
+                        android:thumb="@drawable/switch_thumb"
+                        app:track="@drawable/switch_xml" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="2.0">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.3"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/medium"
+                        android:text="@string/typing"
+                        android:textColor="@color/colorTools"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.7"
+                    android:gravity="center|end">
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/user_typing"
+                        android:layout_width="50dp"
+                        android:layout_height="8dp"
+                        android:layout_marginEnd="25dp"
+                        android:thumb="@drawable/switch_thumb"
+                        app:track="@drawable/switch_xml" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="60.0dp"
+                android:layout_margin="10.0dp"
+                app:boxStrokeColor="@color/colorTools">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/user_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/fack_chat_status"
+                    android:inputType="textAutoComplete"
+                    android:lines="1"
+                    android:paddingStart="10.0dp"
+                    android:paddingEnd="10.0dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20.0dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/deleteLayout"
+                    android:layout_width="0.0dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5.0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_light"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/medium"
+                    android:minHeight="0dp"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/delete"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/saveLayout"
+                    android:layout_width="0.0dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5.0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_light"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/medium"
+                    android:minHeight="0dp"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/save"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

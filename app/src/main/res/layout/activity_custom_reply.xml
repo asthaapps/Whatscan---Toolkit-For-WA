@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlCustomReply"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".AutoResponse.ActivityCustomReply">
+
+    <include
+        android:id="@+id/ic_include"
+        layout="@layout/content_toolbar_info" />
+
+    <LinearLayout
+        android:id="@+id/ll_hint"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:layout_below="@+id/ic_include"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_light">
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/incoming_message"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="45.0dip"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/app_image_desc"
+            android:padding="12.0dip"
+            android:src="@drawable/ic_reply" />
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/reply_message"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reply_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/addmsg"
+        android:layout_below="@+id/ll_hint" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/infotext"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/empty" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addmsg"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_banner"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_light"
+        android:fontFamily="@font/medium"
+        android:minHeight="0dp"
+        android:padding="10dp"
+        android:text="@string/add_custom_replay"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" />
+</RelativeLayout>

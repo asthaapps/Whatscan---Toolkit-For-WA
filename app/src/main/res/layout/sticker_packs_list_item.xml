@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8.0dp"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="5.0dp"
+        app:cardElevation="3.0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rlFirst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/bigcateicon"
+                    android:layout_width="75.0dip"
+                    android:layout_height="75.0dip"
+                    android:layout_margin="10.0dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/logo"
+                    app:riv_border_color="@color/colorTools"
+                    app:riv_border_width="1.0dp"
+                    app:riv_corner_radius="50.0dp" />
+
+                <TextView
+                    android:id="@+id/sticker_pack_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/ll_open"
+                    android:layout_toEndOf="@+id/bigcateicon"
+                    android:gravity="center_vertical|bottom"
+                    android:paddingTop="20.0dp"
+                    android:text="@string/app_name"
+                    android:textColor="@android:color/black"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/sticker_pack_publisher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sticker_pack_title"
+                    android:layout_toStartOf="@+id/ll_open"
+                    android:layout_toEndOf="@+id/bigcateicon"
+                    android:paddingTop="5.0dp"
+                    android:text="@string/app_name"
+                    android:textSize="14.0sp" />
+
+                <ImageView
+                    android:id="@+id/ll_open"
+                    android:layout_width="30.0dp"
+                    android:layout_height="30.0dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20.0dp"
+                    android:background="@drawable/button_light"
+                    android:src="@drawable/ic_baseline_navigate_next_24_white"
+                    android:visibility="invisible"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sticker_view"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@+id/rlFirst"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

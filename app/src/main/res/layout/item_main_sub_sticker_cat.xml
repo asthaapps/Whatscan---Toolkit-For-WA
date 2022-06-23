@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_intent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8.0dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardOne"
+        android:layout_width="match_parent"
+        android:layout_height="130.0dp"
+        android:layout_below="@+id/cardTwo"
+        android:layout_margin="2dp"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="5.0dp"
+        app:cardElevation="2.0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dp">
+
+                <TextView
+                    android:id="@+id/cat_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="100.0dp"
+                    android:layout_marginEnd="10.0dp"
+                    android:fontFamily="@font/medium"
+                    android:text="Category Name"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14.0sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="10.0dp"
+                    android:layout_marginEnd="10.0dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0.0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/img_one"
+                            android:layout_width="60.0dp"
+                            android:layout_height="60.0dp"
+                            android:layout_margin="6.0dp"
+                            android:contentDescription="@string/app_image_desc"
+                            android:scaleType="fitCenter" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0.0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/img_two"
+                            android:layout_width="60.0dp"
+                            android:layout_height="60.0dp"
+                            android:layout_margin="6.0dp"
+                            android:contentDescription="@string/app_image_desc"
+                            android:scaleType="fitCenter" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0.0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/img_three"
+                            android:layout_width="60.0dp"
+                            android:layout_height="60.0dp"
+                            android:layout_margin="6.0dp"
+                            android:contentDescription="@string/app_image_desc"
+                            android:scaleType="fitCenter" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0.0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/img_four"
+                            android:layout_width="60.0dp"
+                            android:layout_height="60.0dp"
+                            android:layout_margin="6.0dp"
+                            android:contentDescription="@string/app_image_desc"
+                            android:scaleType="fitCenter" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0.0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/img_five"
+                            android:layout_width="60.0dp"
+                            android:layout_height="60.0dp"
+                            android:layout_margin="6.0dp"
+                            android:contentDescription="@string/app_image_desc"
+                            android:scaleType="fitCenter" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardTwo"
+        android:layout_width="70.0dp"
+        android:layout_height="70.0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="-40dp"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="5.0dp"
+        app:cardElevation="3.0dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/cat_image"
+            android:layout_width="60.0dp"
+            android:layout_height="60.0dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo"
+            app:riv_corner_radius="5.0dp" />
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

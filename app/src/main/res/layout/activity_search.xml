@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlSearch"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card_color">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_banner"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/llSearch"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shape_white_search"
+            android:elevation="1dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autofillHints="name"
+                android:layout_toStartOf="@+id/iv_sea"
+                android:background="@drawable/shape_white"
+                android:fontFamily="@font/medium"
+                android:gravity="center_vertical"
+                android:hint="@string/txt_search"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textSize="14sp"
+                tools:ignore="LabelFor" />
+
+            <ImageView
+                android:id="@+id/iv_sea"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/w_search" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:overScrollMode="never"
+            android:padding="5dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3"
+            tools:listitem="@layout/item_search" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" />
+</RelativeLayout>

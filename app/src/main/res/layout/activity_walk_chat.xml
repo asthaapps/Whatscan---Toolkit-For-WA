@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_walkChat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".WalkChat.ActivityWalkChat">
+
+    <include
+        android:id="@+id/ic_include"
+        layout="@layout/content_toolbar_info" />
+
+    <TextView
+        android:id="@+id/tv_walk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ic_include"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/medium"
+        android:gravity="center"
+        android:padding="7dp"
+        android:text="@string/walk_chat"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textColor="@color/colorBlack" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/walk_switch"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/ic_include"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:thumb="@drawable/switch_thumb"
+        app:track="@drawable/switch_xml" />
+
+    <TextView
+        android:id="@+id/tv_walk_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/walk_switch"
+        android:fontFamily="@font/medium"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="@string/walk_and_chat_info"
+        android:textColor="@color/colorBlack"
+        android:textSize="13sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_open"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_light"
+        android:elevation="5dp"
+        android:fontFamily="@font/bold"
+        android:minHeight="0dp"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp"
+        android:text="@string/open_whatsapp"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite" />
+</RelativeLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:baselineAligned="false">
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/shape_white"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_1"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:padding="3dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/f_download" />
+
+        <TextView
+            android:id="@+id/tv_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/bold"
+            android:padding="2dp"
+            android:text="40k+"
+            android:textColor="@color/Black" />
+
+        <TextView
+            android:id="@+id/tv_f1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_download"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/medium"
+            android:padding="2dp"
+            android:text="Downloads"
+            android:textColor="@color/Black" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/shape_white"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_2"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:padding="5dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/f_user" />
+
+        <TextView
+            android:id="@+id/tv_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/bold"
+            android:padding="2dp"
+            android:text="7k"
+            android:textColor="@color/Black" />
+
+        <TextView
+            android:id="@+id/tv_f2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_user"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/medium"
+            android:padding="2dp"
+            android:text="New Users"
+            android:textColor="@color/Black" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/shape_white"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_3"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:padding="3dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/f_rate" />
+
+        <TextView
+            android:id="@+id/tv_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/bold"
+            android:padding="2dp"
+            android:text="4.8"
+            android:textColor="@color/Black" />
+
+        <TextView
+            android:id="@+id/tv_f3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_rating"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/medium"
+            android:padding="2dp"
+            android:text="Avg. Ratings"
+            android:textColor="@color/Black" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rlAdOneDay"
+            android:layout_width="175dp"
+            android:layout_height="240dp"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:id="@+id/imgOne"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_image_desc"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_ticket_new" />
+
+            <ImageView
+                android:id="@+id/icAdFreeOne"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:padding="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:src="@drawable/d_no_ads" />
+
+            <TextView
+                android:id="@+id/txtAdFreeOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icAdFreeOne"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="Ad-Free"
+                android:textColor="@color/Black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txtThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAdFreeOne"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="Ad-Free Viewing for \n 1 day"
+                android:textColor="@color/Black"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:text="REDEEM"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:contentDescription="@string/app_image_desc"
+                    android:padding="4dp"
+                    android:src="@drawable/d_bag" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium"
+                    android:maxLines="1"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="10dp"
+                    android:text="600"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlAdThreeDay"
+            android:layout_width="175dp"
+            android:layout_height="240dp"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:id="@+id/imgTwo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_image_desc"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_ticket_new" />
+
+            <ImageView
+                android:id="@+id/icAdFreeTwo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:src="@drawable/d_no_ads" />
+
+            <TextView
+                android:id="@+id/txtAdFreeTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icAdFreeTwo"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="Ad-Free"
+                android:textColor="@color/Black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txtFour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAdFreeTwo"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="Ad-Free Viewing for \n 3 day"
+                android:textColor="@color/Black"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:text="REDEEM"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:contentDescription="@string/app_image_desc"
+                    android:padding="4dp"
+                    android:src="@drawable/d_bag" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium"
+                    android:maxLines="1"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="10dp"
+                    android:text="1600"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rlAdSevenDay"
+            android:layout_width="175dp"
+            android:layout_height="240dp"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:id="@+id/imgThree"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_image_desc"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_ticket_new" />
+
+            <ImageView
+                android:id="@+id/icAdFreeThree"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:src="@drawable/d_no_ads" />
+
+            <TextView
+                android:id="@+id/txtAdFreeThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icAdFreeThree"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="Ad-Free"
+                android:textColor="@color/Black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txtFive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAdFreeThree"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="Ad-Free Viewing for \n 7 day"
+                android:textColor="@color/Black"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:text="REDEEM"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:contentDescription="@string/app_image_desc"
+                    android:padding="4dp"
+                    android:src="@drawable/d_bag" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium"
+                    android:maxLines="1"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="10dp"
+                    android:text="3200"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlAdOneMonth"
+            android:layout_width="175dp"
+            android:layout_height="240dp"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:id="@+id/imgFour"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_image_desc"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_ticket_new" />
+
+            <ImageView
+                android:id="@+id/icAdFreeFour"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:src="@drawable/d_no_ads" />
+
+            <TextView
+                android:id="@+id/txtAdFreeFour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icAdFreeFour"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="Ad-Free"
+                android:textColor="@color/Black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txtSix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAdFreeFour"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="Ad-Free Viewing for \n 30 day"
+                android:textColor="@color/Black"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:text="REDEEM"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:contentDescription="@string/app_image_desc"
+                    android:padding="4dp"
+                    android:src="@drawable/d_bag" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium"
+                    android:maxLines="1"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="10dp"
+                    android:text="8800"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

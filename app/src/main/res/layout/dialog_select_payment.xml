@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llFolder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="30dp"
+        android:layout_height="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/swipe_up_handle" />
+
+    <TextView
+        android:id="@+id/txtOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:fontFamily="@font/medium"
+        android:padding="15dp"
+        android:text="@string/payment_methods"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp" />
+
+
+    <RelativeLayout
+        android:id="@+id/btnGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtOne"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/selector_item_purchase"
+        android:padding="10dp"
+        tools:ignore="UselessParent">
+
+
+        <ImageView
+            android:id="@+id/icon1"
+            android:layout_width="50dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/payment_border"
+            android:padding="4dp"
+            android:src="@drawable/icon_google_play"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/txtGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/icon1"
+            android:fontFamily="@font/bold"
+            android:maxLines="1"
+            android:paddingStart="5dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="0dp"
+            android:paddingBottom="2dp"
+            android:text="Google Play"
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btnRozarPay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnGoogle"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/selector_item_purchase"
+        android:padding="10dp"
+        tools:ignore="UselessParent">
+
+
+        <ImageView
+            android:id="@+id/icon2"
+            android:layout_width="50dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/payment_border"
+            android:src="@drawable/icon_razorpay"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/txtRozarPay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/icon2"
+            android:fontFamily="@font/bold"
+            android:maxLines="1"
+            android:paddingStart="5dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="0dp"
+            android:paddingBottom="2dp"
+            android:text="RazorPay"
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btnPaytm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnRozarPay"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15sp"
+        android:background="@drawable/selector_item_purchase"
+        android:paddingStart="10sp"
+        android:paddingTop="12sp"
+        android:paddingEnd="10sp"
+        android:paddingBottom="12sp"
+        tools:ignore="UselessParent">
+
+
+        <ImageView
+            android:id="@+id/icon3"
+            android:layout_width="50dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/payment_border"
+            android:padding="2dp"
+            android:src="@drawable/icon_paytm"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/txtPaytm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/icon3"
+            android:fontFamily="@font/bold"
+            android:maxLines="1"
+            android:paddingStart="5dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="0dp"
+            android:paddingBottom="2dp"
+            android:text="Paytm"
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

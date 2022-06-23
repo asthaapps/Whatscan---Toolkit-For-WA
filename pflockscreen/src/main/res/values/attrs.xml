@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <attr name="pf_key_button" format="reference|integer"/>
+        <attr name="pf_lock_screen" format="reference|integer"/>
+        <attr name="pf_fingerprint_button" format="reference|integer"/>
+        <attr name="pf_delete_button" format="reference|integer"/>
+        <attr name="pf_code_view" format="reference|integer"/>
+        <attr name="pf_title" format="reference|integer"/>
+        <attr name="pf_hint" format="reference|integer"/>
+        <attr name="pf_next" format="reference|integer"/>
+</resources>

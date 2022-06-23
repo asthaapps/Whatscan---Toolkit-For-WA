@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:overScrollMode="never">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlTerm"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_login"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <ImageView
+                    android:id="@+id/la_back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_back_arrow" />
+            </RelativeLayout>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/la_login"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_below="@+id/rl_login"
+                android:layout_centerHorizontal="true"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/login" />
+
+            <TextView
+                android:id="@+id/tv_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/la_login"
+                android:layout_marginStart="14dp"
+                android:fontFamily="@font/bold"
+                android:text="@string/welcome_back"
+                android:textColor="@color/colorAccent"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/tv_text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_text"
+                android:layout_marginStart="14dp"
+                android:fontFamily="@font/medium"
+                android:text="@string/login_to_your_account_now"
+                android:textColor="@color/colorTools"
+                android:textSize="13sp" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mtf_UserName"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/tv_text1"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="8dp"
+                app:boxStrokeColor="@color/colorTools">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_Username"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:autofillHints="@string/first_name"
+                    android:hint="@string/username"
+                    android:inputType="textAutoComplete"
+                    android:lines="1"
+                    android:paddingStart="10.0dp"
+                    android:paddingEnd="10.0dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlpass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mtf_UserName"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="8dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/mtf_pass"
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    app:boxStrokeColor="@color/colorTools">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_Pass"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:autofillHints="@string/caption"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:lines="1"
+                        android:paddingStart="10.0dp"
+                        android:paddingEnd="10.0dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/pass_show_hide"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:contentDescription="@string/app_image_desc"
+                    android:onClick="ShowHidePass"
+                    android:padding="7dp"
+                    android:src="@drawable/pass_hide" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtForgotPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlpass"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="14dp"
+                android:text="@string/forgot_password"
+                android:textColor="@color/colorTools"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/bt_sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtForgotPass"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/button_light"
+                android:elevation="3dp"
+                android:gravity="center"
+                android:padding="3dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="10dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/hand_shake" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bold"
+                    android:padding="3dp"
+                    android:text="@string/sign_up"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bt_sign_in"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text=""
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/rlOr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_send"
+                android:layout_margin="10dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/txtOr"
+                    android:background="#ffc0c0c0" />
+
+                <TextView
+                    android:id="@+id/txtOr"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/button_light"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center"
+                    android:text="@string/or"
+                    android:textColor="@color/colorWhite" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toEndOf="@+id/txtOr"
+                    android:background="#ffc0c0c0" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlOr"
+                android:layout_marginTop="10dp"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_google"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/bg_border_login"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/la_google"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/icon_google" />
+
+                    <TextView
+                        android:id="@+id/txtGLogIn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/medium"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/google_sign_in"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_fb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_border_login"
+                    android:elevation="3dp"
+                    android:gravity="center_vertical"
+                    android:padding="3dp"
+                    android:visibility="gone">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/la_fb"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/icon_facebook" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/medium"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/facebook_sign_in"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlTerm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txt_term"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingStart="35dp"
+            android:paddingEnd="35dp"
+            android:text=""
+            android:textColor="@color/colorBlack"
+            android:textSize="13sp" />
+    </RelativeLayout>
+</RelativeLayout>

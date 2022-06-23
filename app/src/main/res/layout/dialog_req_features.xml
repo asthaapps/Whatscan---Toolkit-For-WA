@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rlReport"
+    android:background="@color/colorWhite"
+    android:layout_below="@+id/ic_include">
+
+    <ImageView
+        android:id="@+id/la_play"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/req_featurs" />
+
+    <EditText
+        android:id="@+id/et_report"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@+id/la_play"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15sp"
+        android:autofillHints="@string/describe_your_issue"
+        android:background="@drawable/shape_card"
+        android:gravity="center"
+        android:hint="@string/describe_your_issue"
+        android:imeOptions="actionDone"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorBlack"
+        android:textSize="15sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_report"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/button_light"
+        android:elevation="5dp"
+        android:fontFamily="@font/medium"
+        android:minHeight="0dp"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp"
+        android:text="@string/submit"
+        android:textAllCaps="true"
+        android:textColor="@color/colorWhite" />
+</RelativeLayout>

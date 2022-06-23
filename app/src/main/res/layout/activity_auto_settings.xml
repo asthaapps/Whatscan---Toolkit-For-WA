@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlAutoSetting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <include
+        android:id="@+id/ic_include"
+        layout="@layout/content_toolbar_info" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ic_include"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/smart_options_info"
+                android:fontFamily="@font/medium"
+                android:maxLines="1"
+                android:paddingStart="15dp"
+                android:paddingEnd="10dp"
+                android:text="@string/smart_options"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/smart_options_info"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:src="@drawable/ic_info" />
+        </RelativeLayout>
+
+        <RadioButton
+            android:id="@+id/ifphonelock_radio"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:buttonTint="@color/colorTools"
+            android:text="@string/turn_on_if_phone_is_locked"
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/reply_options_info"
+                android:fontFamily="@font/medium"
+                android:maxLines="1"
+                android:paddingStart="15dp"
+                android:paddingEnd="10dp"
+                android:text="@string/reply_options"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/reply_options_info"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/app_image_desc"
+                android:src="@drawable/ic_info" />
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/reply_options_group"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/reply_continuously_radio"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:buttonTint="@color/colorTools"
+                android:text="@string/reply_continuously"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/time_delay_radio"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:buttonTint="@color/colorTools"
+                android:text="@string/time_delay_3_seconds"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/reply_once_radio"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5.0dip"
+                android:buttonTint="@color/colorTools"
+                android:text="@string/reply_once"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txtThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/medium"
+            android:maxLines="1"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:text="@string/welcome_message"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/welcome_radio_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5.0dip"
+            android:buttonTint="@color/colorTools"
+            android:text="@string/someone_message"
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                android:id="@+id/welcome_text"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.9"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:paddingStart="40.0dip"
+                android:paddingEnd="0dp"
+                android:singleLine="true"
+                android:text="@string/hi_welcome_thank_you"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/edit_welcome_text"
+                android:layout_width="45.0dip"
+                android:layout_height="fill_parent"
+                android:contentDescription="@string/app_image_desc"
+                android:padding="11.0dip"
+                android:src="@drawable/ic_edit" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

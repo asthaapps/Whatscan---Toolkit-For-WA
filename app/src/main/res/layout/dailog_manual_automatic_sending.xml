@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlSendMode"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:padding="3dp">
+
+    <TextView
+        android:id="@+id/txtOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/medium"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="@string/choose_sending_mode"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/btnManualForwarding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:buttonTint="@color/colorTools"
+            android:gravity="start"
+            android:padding="6dp"
+            android:text="@string/manual"
+            android:textSize="15sp" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/btnAutomaticForwarding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="15dp"
+            android:buttonTint="@color/colorTools"
+            android:gravity="start"
+            android:padding="6dp"
+            android:text="@string/automatic"
+            android:textSize="15sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEnableAutomaticForwarding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/colorTools"
+            android:fontFamily="@font/medium"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:text="@string/enable_automatic_forwarding"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/forward_material_button"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_gravity="end"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_light"
+        android:fontFamily="@font/medium"
+        android:text="@string/next"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+</LinearLayout>
